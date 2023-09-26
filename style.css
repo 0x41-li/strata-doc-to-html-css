@@ -1,0 +1,174 @@
+/* || Variables */
+:root {
+    --primary-color: #2A4FA8;
+    --accent-color: #EE6B2C;
+}
+
+/* || General */
+*,
+*::before,
+*::after,
+html,
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Jost', sans-serif;
+}
+
+img {
+    max-width: 100%;
+}
+
+
+/* || Utilities */
+.bg-primary {
+    background-color: var(--primary-color);
+}
+
+.bg-accent {
+    background-color: var(--accent-color);
+}
+
+.color-primary {
+    color: var(--primary-color);
+}
+
+.color-accent {
+    color: var(--accent-color);
+}
+
+.font-bold {
+    font-weight: 700;
+}
+
+.flex {
+    display: flex;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.items-center {
+    align-items: center;
+}
+
+
+/* || Custom Styles */
+.doc-wrapper {
+    position: relative;
+    max-width: 793px !important;
+    margin: 0 auto;
+
+    overflow-x: hidden;
+}
+
+/* || Pages' shared styles */
+.page {
+    position: relative;
+    height: 840px;
+}
+
+.page__header {
+    width: 100%;
+    height: 40px;
+}
+
+.page__header>div:nth-child(1) {
+    height: 34px;
+}
+
+.page__header>div:nth-child(2) {
+    height: 6px;
+}
+
+.page__footer {
+    position: absolute;
+    bottom: 0;
+
+    width: 100%;
+
+    height: 40px;
+}
+
+.page__footer p {
+    color: white;
+}
+
+
+/* | Page: cover */
+.page__property-info {
+    position: absolute;
+    bottom: 40px;
+
+    width: 100%;
+
+    width: 100%;
+    height: 300px;
+}
+
+.page__property-info__background {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    z-index: -999;
+
+    width: 100%;
+}
+
+.page__property-info__background>div:nth-child(1) {
+    height: 6px;
+}
+
+.page__property-info__background>div:nth-child(2) {
+    height: 288px;
+}
+
+.page__property-info__background>div:nth-child(3) {
+    height: 6px;
+}
+
+.cover__company-and-sponsors {
+    margin-top: 36px;
+    margin-left: 72px;
+    margin-right: 72px;
+}
+
+.cover__company-name {
+    font-size: 30px;
+}
+
+.cover__sponsors {
+    width: 92.88px;
+}
+
+.page__property-info__list {
+    margin-top: 30px;
+    margin-left: 72px;
+    margin-right: 72px;
+
+    list-style: none;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.page__property-info__list li {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.page__property-info__list p {
+    font-size: 10px;
+
+    color: white;
+}
