@@ -1,7 +1,20 @@
+/* || Fonts */
+@font-face {
+    font-family: "Verdana";
+    src: url("../fonts/Verdana.ttf");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Verdana";
+    src: url("../fonts/Verdana-bold.ttf");
+    font-weight: 700;
+}
+
 /* || Variables */
 :root {
-    --primary-color: #2A4FA8;
-    --accent-color: #EE6B2C;
+    --primary-color: #0044A7;
+    --accent-color: #F36A22;
 }
 
 /* || General */
@@ -16,7 +29,7 @@ body {
 }
 
 html {
-    font-family: 'Jost', sans-serif;
+    font-family: 'Verdana', sans-serif;
 }
 
 img {
