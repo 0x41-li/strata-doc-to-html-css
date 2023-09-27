@@ -112,7 +112,30 @@ img {
     height: 40px;
 }
 
-.page__footer p {
+
+.page__footer > div:nth-child(1) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    width: 100%;
+
+    height: 6px;
+}
+
+.page__footer > div:nth-child(2) {
+    position: absolute;
+    top: 6px;
+    left: 0;
+    right: 0;
+
+    width: 100%;
+
+    height: 34px;
+}
+
+.page__footer>div:nth-child(2)>p {
     color: white;
 }
 
@@ -125,7 +148,7 @@ img {
     width: 100%;
 
     width: 100%;
-    height: 300px;
+    height: 294px;
 }
 
 .page__property-info__background {
@@ -144,10 +167,6 @@ img {
 
 .page__property-info__background>div:nth-child(2) {
     height: 288px;
-}
-
-.page__property-info__background>div:nth-child(3) {
-    height: 6px;
 }
 
 .cover__company-and-sponsors {
@@ -184,4 +203,18 @@ img {
     font-size: 10px;
 
     color: white;
+}
+
+
+/* First page */
+.first-p__logo {
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: 72px;
+    width: 160px;
+    width: fit-content;
+}
+
+.first-p__logo>p {
+    font-size: 24px;
 }
