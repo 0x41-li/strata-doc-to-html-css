@@ -240,7 +240,7 @@ img {
 
 .toc__top-bar>p {
     color: white;
-    font-size: 12px;
+    font-size: 10px;
 }
 
 .toc__root-list {
@@ -321,4 +321,57 @@ img {
 
 .toc__root-list>span:last-child {
     font-size: 8px;
+}
+
+
+/* THird page */
+.third-p__top-bar {
+    margin: 0 72px;
+    margin-top: 30px;
+    padding: 4px 8px;
+    border: 1px solid black;
+}
+
+.third-p__top-bar__h2 {
+    color: white;
+    font-size: 10px;
+}
+
+.third-p__chapter-info {
+    margin: 0 72px;
+    margin-top: 20px;
+}
+
+.third-p__info-list {
+    list-style: none;
+    counter-reset: info-list-counter;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.third-p__info-list__li {
+    counter-increment: info-list-counter 1;
+
+    display: flex;
+}
+
+.third-p__info-list__li::before {
+    content: var(--info-list-counter-var) "." counter(info-list-counter);
+    flex: 0 0 20px;
+    font-weight: 700;
+}
+
+.third-p__info-list__li>span {
+    font-size: 10px;
+}
+
+.third-p__info-list__title {
+    flex: 0 0 130px;
+    margin-left: 30px;
+}
+
+.third-p__info-list__value {
+    flex: 1;
+    margin-left: 40px;
 }
