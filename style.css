@@ -252,11 +252,11 @@ img {
     counter-reset: root-level-item;
 }
 
-.toc__root-list>li>span {
-    font-size: 8px;
-    display: inline-flex;
-    justify-content: space-between;
+.toc__root-list>li {
+    display: flex;
+    flex-wrap: wrap;
 }
+
 
 .toc__root-list>li::before {
     counter-increment: root-level-item;
@@ -266,11 +266,21 @@ img {
     margin-right: 6px;
 }
 
+.toc__root-list>li>span {
+    font-size: 8px;
+    display: inline-flex;
+    justify-content: space-between;
+    flex: 1;
+}
+
 .toc__second-level-list {
     counter-reset: second-level-item;
     margin-top: 2px;
     padding-left: 8px;
     list-style-type: none;
+    overflow: hidden;
+
+    flex: 0 0 100%;
 }
 
 .toc__second-level-list>li {
