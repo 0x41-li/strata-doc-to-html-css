@@ -26,6 +26,7 @@ body {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    position: relative;
 }
 
 html {
@@ -104,6 +105,12 @@ img {
     height: 6px;
 }
 
+.page__body {
+    position: relative;
+    height: 760px;
+    padding-top: 1px;
+}
+
 .page__footer {
     position: absolute;
     bottom: 0;
@@ -143,9 +150,23 @@ img {
 
 
 /* | Page: cover */
+.cover__company-and-sponsors {
+    margin-top: 36px;
+    margin-left: 72px;
+    margin-right: 72px;
+}
+
+.cover__company-name {
+    font-size: 30px;
+}
+
+.cover__sponsors {
+    width: 92.88px;
+}
+
 .page__property-info {
     position: absolute;
-    bottom: 40px;
+    bottom: 0px;
 
     width: 100%;
 
@@ -169,20 +190,6 @@ img {
 
 .page__property-info__background>div:nth-child(2) {
     height: 288px;
-}
-
-.cover__company-and-sponsors {
-    margin-top: 36px;
-    margin-left: 72px;
-    margin-right: 72px;
-}
-
-.cover__company-name {
-    font-size: 30px;
-}
-
-.cover__sponsors {
-    width: 92.88px;
 }
 
 .page__property-info__list {
@@ -239,6 +246,7 @@ img {
 .toc__root-list {
     margin-top: 24px;
     padding-left: 14px;
+    padding-right: 14px;
     list-style-type: none;
 
     counter-reset: root-level-item;
@@ -246,6 +254,8 @@ img {
 
 .toc__root-list>li>span {
     font-size: 8px;
+    display: inline-flex;
+    justify-content: space-between;
 }
 
 .toc__root-list>li::before {
@@ -265,12 +275,10 @@ img {
 
 .toc__second-level-list>li {
     margin-bottom: 2px;
-}
+    display: flex;
 
-.toc__second-level-list>li>span {
-    font-size: 8px;
+    overflow: hidden;
 }
-
 
 .toc__second-level-list>li::before {
     counter-increment: second-level-item;
@@ -278,9 +286,29 @@ img {
     margin-right: 22px;
 
     display: inline-block;
-    width: 24px;
+    flex: 0 0 24px;
 }
 
-.toc__root-list span:last-child {
+.toc__second-level-list>li>span {
+    font-size: 8px;
+    display: flex;
+    flex: 1;
+
+    overflow: hidden;
+}
+
+.toc__second-level-list>li>span:first-child::after {
+    content: "...................................................................................................................................................................................................................................................................................................................................................................................................";
+
+    flex: 1;
+
+    overflow: hidden;
+}
+
+.toc__second-level-list>li>.toc__page-n {
+    flex: 0 0 auto;
+}
+
+.toc__root-list>span:last-child {
     font-size: 8px;
 }
