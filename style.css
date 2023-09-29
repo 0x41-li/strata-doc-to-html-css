@@ -259,7 +259,7 @@ img {
 
 .toc__second-level-list {
     counter-reset: second-level-item;
-    margin-top: 2px;
+    margin-top: 0.06in;
     padding-left: 8px;
     list-style-type: none;
     overflow: hidden;
@@ -268,7 +268,7 @@ img {
 }
 
 .toc__second-level-list>li {
-    margin-bottom: 0.04in;
+    margin-bottom: 0.06in;
     display: flex;
 
     overflow: hidden;
