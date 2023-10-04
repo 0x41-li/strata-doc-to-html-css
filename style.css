@@ -525,7 +525,21 @@ img {
     font-size: 0.25cm;
 }
 
+.text-signature {
+    margin: 0 2.4cm;
+    margin-top: 0.8cm;
+    
+}
 
+.text-signature > p {
+    font-size: 0.3cm;
+    margin-bottom: 0.1cm;
+}
+
+.text-signature > img {
+    margin-top: 0.4cm;
+    width: 3cm;
+}
 
 
 
