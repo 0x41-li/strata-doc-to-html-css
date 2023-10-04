@@ -541,6 +541,14 @@ img {
     width: 3cm;
 }
 
+.contact-and-address-info {
+    margin: 1.4cm 2.4cm 0 2.5cm;
+    gap: 0.8cm;
+}
+
+.contact-and-address-info > p {
+    font-size: 0.284cm;
+}
 
 
 /* || Specific */
