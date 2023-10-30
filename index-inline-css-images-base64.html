@@ -1,0 +1,1179 @@
+<!DOCTYPE html><html lang="en" style="--accent-color: #F36A22; --primary-color: #0044A7; box-sizing: border-box; font-family: 'Verdana', sans-serif; font-size: 0.35cm; margin: 0; padding: 0; position: relative;"><head style="box-sizing: border-box; margin: 0; padding: 0; position: relative;">
+    <meta charset="UTF-8" style="box-sizing: border-box; margin: 0; padding: 0; position: relative;">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" style="box-sizing: border-box; margin: 0; padding: 0; position: relative;">
+    <title style="box-sizing: border-box; margin: 0; padding: 0; position: relative;">StrataVal</title>
+
+    <style>
+        @font-face {
+            font-family: "Verdana";
+            src: url("../fonts/Verdana.ttf");
+            font-weight: 400;
+        }
+
+        @font-face {
+            font-family: "Verdana";
+            src: url("../fonts/Verdana-bold.ttf");
+            font-weight: 700;
+        }
+    </style>
+</head>
+
+<body style="box-sizing: border-box; margin: 0; padding: 0; position: relative;">
+
+    <!-- Document Wrapper -->
+    <div class="doc-wrapper" style="box-sizing: border-box; margin: 0 auto; overflow-x: hidden; padding: 0; position: relative;">
+
+        <!-- Page | Cover -->
+        <div class="page cover" style="box-sizing: border-box; height: 29.7cm; margin: 0 auto; margin-bottom: 0.25cm; padding: 0; position: relative; width: 21cm;">
+
+            <!-- Page Header -->
+            <div class="page__head" style="box-sizing: border-box; height: 1.35cm; margin: 0; padding: 0; position: relative; width: 100%;">
+                <div class="bg-primary" style="background-color: var(--primary-color); box-sizing: border-box; height: 1.15cm; margin: 0; padding: 0; position: relative;">
+                </div>
+                <div class="bg-accent" style="background-color: var(--accent-color); box-sizing: border-box; height: 0.20cm; margin: 0; padding: 0; position: relative;">
+                </div>
+            </div>
+            <!-- / Page Header -->
+
+            <!-- Page Body -->
+            <div class="page__body" style="box-sizing: border-box; height: 27.15cm; margin: 0; padding: 0; position: relative;">
+                <div class="cover__company-and-sponsors flex justify-between items-center" style="align-items: center; box-sizing: border-box; display: flex; justify-content: space-between; margin: 0; margin-left: 3.2cm; margin-right: 3.2cm; padding: 0; padding-top: 0.9cm; position: relative;">
+                    <div class="cover__company" style="box-sizing: border-box; margin: 0; padding: 0; position: relative;">
+                        <p class="cover__company-name font-bold" style="box-sizing: border-box; font-size: 1.05cm; font-weight: 700; letter-spacing: -0.055cm; margin: 0; padding: 0; position: relative;">
+                            <span class="color-primary" style="box-sizing: border-box; color: var(--primary-color); margin: 0; padding: 0; position: relative;">Strata</span><span class="color-accent" style="box-sizing: border-box; color: var(--accent-color); margin: 0; padding: 0; position: relative;">Val</span>
+                        </p>
+                    </div>
+
+                    <div class="cover__sponsors" style="box-sizing: border-box; margin: 0; padding: 0; position: relative; width: 3.3cm;">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAH0AAABFCAYAAABnqenlAAAgAElEQVR4nO2dd3xW5fn/3/c5z8qTPUkgjISww5YhW0FlKEqduGpr6/jqy1r7bbVWW1u1tgraobhwolYBkSGEIXtHdgJEIIFA9h5PnnnOuX9/PMkhDwSLSuvXH/m8XryAc+51znVf676ucz1CSin5gaGprpa1Hyxg2v/chSKsCCG+7yX9oGC58ENKDAyQChgShERXwKIrgEAqwVbKOeikoaGiIKUCApAGUgiQAsWQGCpgSBoLT4BQEUiCDdtxvrjgRJdSIDWDxpoqNCGIio3BX+fGo/mxhYchwiOxGpyTTkKqSE3HXVeD1A2UmEgC9S5UIXEkJqBKgSENFAGy1SBSSgKBAJqmERYWFhzrG0gAKeVFIzGUCz2gFJK8rVv44/gr+MvYqeQsXcHCv77Ik5ddzvw//hFF04FzaxTDgOqvjvDs1Gt55kc3kL9hC3+8fBrPXn8zAZ8XYUg0Q8PQjdNzSolhGCxevJi//e1veDyeb0xwj8eD3+//Rs/qdrv5AWrHC0R0CQYgjSCnH1iWhVFXjVZdTtZrrzFw+FBkWTl75s2n5kTB15AcpAyw9o03aMo7QmpqJ+ISotGKiwicLMFqSECiqhYURUCrF+7z+SgtLcXhcFBYWIhhGHi9XgoKCkzC6LpOYWEhuq6Tn5/Pjh07cLlclJSU8NFHH5GVlUVxcTE1NTWUlpaSm5uLpmk0Njaye/dusrOzqays5OTJk/h8PubPn2/Ooes6UkoqKirIzs5m7969NDU1cfLkSTRNo6SkhPz8fHbu3MmpU6fM9t8HLhinCwN0AcLv5/AXa1EMAQo05R4lPC6W1IFD8Lk9bHjnfXRdOyez1xUWse5f8wkogkn33I1whIEiQVHMxSpCABIJyGaGPnbsGCkpKUycOJF9+/YhpaSuro5ly5ZhGEGp4PP5WLVqFSUlJWRlZVFbW8vChQsJBAK43W7cbjcej4d9+/Yxa9Ys6urq8Pv9vPLKK1RVVWEYBi+++CLvvPMOfr+fQCBAIBBg8eLF+P1+CgoKeOmll9B1nbKyMmbPns2KFSvw+/3MmTOH9evXYxgGc+bM4dChQ98b0S+ITpeA0EFTfOyZ9wn1hSeJ75tJfEoHjm3YxOFNmxj34zspyT1M/hfr8T78ILbEDmeNYxg6+1eswBoI0HX4MDLGjqY67zgBJKquBXV584wt70tKCPj9zJ8/nzvvvJOUlBSWLVtGfX09hmGE6GpFUVBVlYaGBux2OyNGjMDtdtOxY0c6depEly5dSE9Pp7i4mBtuuIFhw4bxwQcfMHz4cCZMmIAQgj59+vDKK68ghAhRIR6Ph4ULF3L//ffTuXNnADp16sS6desQQtCxY0fuuusuVFWlW7durFu3jn79+l2I1/+NcUE4XRDkuEBdAx8/+yx+KZn24P0Mv/UWajUvW+YvJH3wQKLi4qk6dZLSg3noslkXI9GRSAN0zc/ez7Nw2KyMnHkjwmpHBgVGM1e0paclBQUFeL1eunTpQlhYGGlpaWzZssUUoS2cLqVESkmvXr2IiYnhiSeeoLi4GCklqqqGcF5MTAyGYVBYWEhmZqZJ5PDwcDp27HjWKjweD1FRUSH3evXqRVRUlDmeqqoAREZGEggEftjiXSLRVMmxrV+i19aQ1CODzGlX0OfycaR0Tcd9soScjZvoPWE8AZeX1W/OxdD86ICQQdUQUAxK9+dQtP8gRlg4PcaMRgiBYQFVFy0TtUF3wfbt27ntttuYP38+b731FjU1NWRnZxMIBPB4PGiaBkBNTQ1er5e8vDzGjBnD008/TXZ2duhoQpjSQVEUUlJSOHr0aHB6KfF6vZSXl5/1DhwOB3V1ddTU1JgS4MSJE7hcrrPatp7j+8AF0ukCQwY4sORzhC7oP/lKRFQUYTFRXPXAPYQpCls+WcCwG6ajWuwcXLWK4pz9GFKCIRGGQGoBls36O9Lto/cVlxGX1uW8vG+fz0tpaSmZmZnceuut3H333dx3330kJiZSX19PQkICK1as4ODBg8ydOxfDMKirq+PTTz8lPz8fp9OJoigEAgFTHbRwoaIo3Hrrraxbt45t27Zx5MgRZs2aRX19PQCapmEYBpqm4XQ6mTJlCn//+9/Jyclh586dfPDBB0Bws7RsPADDMEzp833gwvjpUuKuKCd340b8AjKvuhIVBUU36Hf1FL74xxxqCwowrNDnsnHs/2INX37yKdcNGIwhBEJIqg4dYf8XawmLDmfGI79EqBaQQU9cQHB7trELArrGjTfdgKIIpAgae4aEm2+6EakbzLz1Vvbn7KeyooKf/vxn+DweuqV2we4Mo6G+nhnXzUAakuEjRuB0OhEIMvv3JyzMgQAc4U4efPB/OHjoMEUlxdz1kzvRNYnVbmXipIk4nE6mT5+OxWKhf//+xMXFUVBQgKqqPPLII9TW1mKz2Rg3bpzJ2Q6Hg8suu6xNjm8R+f9OCrRWDd9UYlwgQ85g87sf4S0vJzmzH2mDh6AhsSoKUYkdSB82ggNLlrBzURaX3nETeZu3cnDtRib/poGwuGh0qbM3ayVhAnqOHkFczwxURWk50ENRFFBVZKiXBkB9RSkHPltK90ceDj68BEPoFO74kkBAY/QNMxg9chRCF/gtYDEkUg/Qv0dPrM4wUFQUCaldUhFSYCDp0KEDwghOpCCIiYlj9KWjmtWLRBcqqjTISM9AAj179kYaOllZWfTp04cJEyaY64uNjQWgW7du5jWr1UpaWpopJaxWa/AZOX3IZLPZzklMKSW6rqNp2te2Oxe+s3g3DIP6sjK2zP0Ai83BLX/6HRanAysCgURYVYbfdANeKdizaDGRyUk4OyZSmX+Cwi3bMAwd4feRu2IVHs3gkmuuQSqi2RcT5hyGobc5f3JKJ47u2UtDTQVCGsGN4fGw8r33Se3VDc3npex4PtXFhUi/G091NW6/ixWvvoFiSHy1lUgMaFYxntpKpG5gCPC6Gyn56hD11dXo0sCPQWNNDd76GsqLi/C7XZQdOYjX14gUkrKyMlwuF42Njfj9fioqKqivrzeNScMwqKqqwuVy4ff7KSoqYtmyZTQ2NuL1evF4PLhcLrKysigrK8Pr9VJTU2OqAsMwaGpqwuv1cvz4cdasWYPL5TI3T1lZWYjXci58J06XUmJISf62bFz11XTs1YOeo0ZTlX8CDAOpGBhSEtO5Ex1796T0q8McWLGewdOuYO0/3mTxP17mN1ddxqltuyjKzcXpiKDH2NGgBF0yQQvd5Tn9eqGE03P4YLa88Q5Tfvu/CGknd8NGhGFgszuZ+/BjFJefxIpCzwH9qC+t5bZZT+IpLsXn8fLWn/7Mg7NfQFcVXGWVvP/n53hg9ixO7NnP/L/MRrfo+LwBJs+8jZFXX8MfZ9xCjMNOr8mTqCk8SVVBPpFdOnP/rNkoioKUknnz5mEYBh6PB4/Hw6hRoxg/fjybN29m8+bNBAIBpk2bxvr166mrq6OyspKuXbvidrspLy/n1KlTHDhwgOnTp/Pmm2/yzDPPEBMTg5SSuXPnMnjwYDZs2IDb7aaiooLJkyezaNEimpqaCAQC9OvXj6lTp+JwOC4s0aU0MCQECLBrwSIUQ5I5YTzH9+Xw8h23Y/cbBBSB0rLjAhoOu5VDa1Zz299msW3eAk7t2s1XGzax5KWXwefn8vseJCY1FYVgsMWQEqNZcqkIFCk4S5IpMGrq1Tx27U2M+elPcMYnsm7Bx0y641bm/fk5ptx4G70njkaXBnsWf86WA4ux6FZ0YaAoCnZdAyFQjeABkCNg0FBSwvLX3+Wnf3qK+Ix03DWVvPfbJ4mKjkF1NXD1o0/SY/hI3n3st/xm3jwOZmdDQMMQwfXquk5GRgaTJk3C4/Ewe/ZsOnfuzOrVq7nvvvsAcDqdpKWlsWbNGmbOnMmOHTsIBALcc889fPbZZ0yePBmHw4GiKKb4FkJgsVjo2bMnqamp7N69mylTpvDmm28yZcoUunfvjt/vZ9WqVezatYsxY8ZcWKKDQAqDuoNfkbd+E2iCQTdcQ+7abHqPvxwLYAgRDKdJidAMjmzeSHVhIa6aOgZfdRU7PvuUjS/PpXzXHiKSUrjiFw8glDY0TrNPL9tgdwuShIx0Bk8Yw7FtO+l0ySCEWyNtwEC2LfyUPhPHgMOJFRh23dXs27A19ClabyIpERJqi4qpO3mMRe+9jVOHgBB4PV6OFx4jgELHXhnYY2JI7NmbF++9j7G3zERYrRjNdoDP56Nbt25YLBYiIiLo27cvdXV13HzzzXz44YcMGDCACRMm4PV6TdewhbgWi8U8RFJV1ZQeoWsWWK1WIHj+X11dzdatW9m+fbupRr7OO/jWRNcEqAHJqpfnovs99LtyIql9+pGY2Q87Kgay2eAOvlVd0/n4wd+wY/G/2PDBPEbfciM5S5ZybPduhGqj97ix6PFORCtfPISpZdsiXrMYIC3c+OC9LJ/7LnUVFWROnYgzJhafp4mAx4vV4UQxJLUNNegNja0ILdACenBYCVLTkJqGzW4nuVdvbrr/IQIWP6pUKMnLJ6FjBza++h4SFSNgMGnmLbivn8F7v3uUlIx0DMMIHlS1ssBbuFTXdZKSknjggQfYvn07e/bsoW/fvqb13pqwhmGY/VRVxefzmXaBy+UKsfqtVithYWFMnToViyVIzqampmCbM99hM761IWfRobzwOIfXfIGwW5jyq18grGE4rFYsNjs2mwOLzYFqs6Pa7FjDnIy99y4MYeHA2i+wOOxYUlIg4McVcNP/2mk4hM08SwfQDRABH5rQURAYAqRUQkKqOgIFQUK3HjQUlbD67XfJvHQstvhoBk2ewodP/5kjO7aRs2UdHz72JIbHg04wWicsCsLuZNNH73J053Y2zX2bxvIK4nv3QlMsbF66mIZT5Rzels1Hr87BGmbDrfrRdUF9ZREf/vkZ6kqLsUoLtjAHUtORetCoaiFiC8e53W5efPFFCgoK8Hg82O1201JvMbxa/tZ13dw0EyZMYMOGDZw4cYKNGzdSXFxsttM0jcjISHr37s2GDRuora2lsLCQ999/H5/Xy/51m2isrMaQRgjDqE899dRT34boBgaVx4/jd7lInziWodOvRbHbsIjTVndrSCGJSoxHqioxXbuRmJ5B3wmjiIiNp/uYUYy8/WZsNltzMKW5DyCQ+FWF7peOpNfoUagWKwGfl682b6HfFRNREAgEhs1CfGICnfv0offYS1EsdtIHDyIxMZ4DWaupKiph+s/uJiojndSePRFWO0k9MugzfCgncnI5tCObAZeOJnlIJl379mXguFF46+rYnbWKqIhIbnns10Qmd8KmWug+dAhRHRKJsEew9/PFTLj1droNHITFYqFjx47ExMSQmppKeHi4+SypqamMHj2a3bt3Ex8fz/Dhw7FYLNjtdpKTkxFCEBUVRUJCAkIIOnTogMVioUePHmYQKDk5mcGDB5OSkmJyeFJSEr1790ZVVfbu3Yvf7+f6668ntWMKu1Z/TkKnTjjj41EQpyXot02X0pvPsXVDx0rQxRKWIAnaPiKX6FLDaOZMZHAjSGkgpIIQKopiIMTpU5ggl0g0dFRDoCgqUgg8NbUsfu55bnr+WYQiUHWBrgCGgUASUMFuCAyhgmGgSD0okpWgVWAxBJoiUSXoqoJiGEgZzOwIilUDFAVhgDQkQgEDCwIDTUpURaAIMAyB0A10RWBp45lb9LFhGKYfHnwVZx/BtnXY0vL31+nnFhXSElcw5yWYdyBQEEJBbUWXb63TVSGCVq+inF+ykhCowop6xuWWR23WYCH3Wl6UDdVURAIQhoEXK0gNi7SBKoIP0hzQUAChNI+mKgSPWFrpMgWsreYVihoytwy+omAHxewCQb/CfF5FART1rGcKfWxhBlpaX2ur3bmgtGXcttG/9RgCgVWxttn2O5/IfdeQwbfpbwkL45KpV6CKtl/3NxmzrbZf1///h4Sqby3ev09IGQzHWqRAim9+9nyx4z+QDftfgGi2CzjDz27HeeEHSXTTP2gn+LfCBc+Gbcf/fbQT/SJEO9EvQrQT/SJEO9EvQrQT/SJEO9EvQrQT/SJEO9EvQrQT/SJEO9EvQrQT/SJEO9EvQpxF9Nbh9WCqT/DPmdfb8cOFGVoNaDrrN+YgFMHE8f05mHeK5Vl78PsDAMTGOLn+ulEkd4hh8efZZKSnkNm3S7AMSDt+UDA5ffOWg3y5J58hA9M5ml/K0s+/BCR2uxW73UpDo5d5/9pIWXkdw4ZksHzVbnbtOfY9Lr0d3xYmpx85VkqYw0p0lJOsNXtQFMGvHpqOxRLMQ8s5eIpFS7ZTUlZLRnoyDpuVo/klDB3cHVVtNw1+SDCJbhjSzKjUNXlWGq7SnAaqa81fjwrO0vXt+GGg7XSpC6ym294YbXyM2Ea/tpIez7d0R1sf/J/vx/4t7b6uSMC5xmudp35mavKZ/U+/G9GmfXTudwDQdv586/fdVvr0fzxHzuVq4q13PqahoTHkemJiAjdeP434+Ng2+504cYpFn2Vx5x03kJAQZ14/ln+C5SvWct89t2O324Hgd2KabmC3nc7zzv5yH7t2H+D+e+9ACEF+/gnmL1jGz352G4mtxmsNTdP5ZMEyLKrCTTdeA8DiJStpaHRx28wZ5rdiAI2NLt6Y+yE/+fHNxMXFAOD1evl00QpycvOChBeCfn16MPOWGdharU1KSX5+IZ8sWEp9fSNB28nOlMmXMXLEEJNQFZXVvPHmB1wz7QoGDuwbstY1azZSW1fPzTdNN6/VNzTy4YeLOFFYBATLp4weNYxpUyeGEP8/roy9Xh+rV28kL+8YZaUVlJVWUFpaybr1W5h5+wOUlJxdtEdKSdbK9Xw8fwkrV28IuRfmcLBk6SpqauvNa0uWrubaGT+lrKzS7L9+w1by80+Ybcorqli2/AtcjWcX/mmBYRjs2LGLndl7zYoXu/fk8MYbH5L95b4QDvJ6faxctZ4mtxsAj9fLo48/x7wPP8Xt9qJpOgG/nwWfLufXjz6N1+sz+x7IOcyDD/2Or77KRwsE0DSdiooqnvj98yxZusqcp7HRxZKlq3h5zrsh/aWU5OQeZufOPWbbyqoa7vrJw6xZu5mAFhzT4/Hy93++xSuvvmd+Hwf/xWzYe39+O6NHD6NFd5woPMU99/6aLVuzTa5qgcfjZWf2XsaMHs7Kleu5+cZrzE9zExLiiIyM4OTJYlKSk5BSsndfLg0N9Rw6fITk5EQMw+DIkQLGjhlxQdau6Rp/eGoWb899kc6dzy4nBlBVWcPhw0d55OF7uGLSuGANHAnr12/lyT+8wJGjBQzo3we/38+fn/sHw4YN5NFfP0B4uDM4h6bx0cdL+Ps/32Lo0IF0aTVP7sE85rz6Hg//4mfn/NolL+8YZeWVvP7q8/TP7AUEba533/uEhYuWc9ON19AhKQH4L57ICfObawVVVYiOikRVLXha7eAWnDxVQnVNLfffeyf19Y3s3pNj3rPZrHTrmsq+/QeB5tKfJ4u45ebrOHDgMBDcNIUni+nevdsF+RBiwIC+dOzYgbff/eSchqvR/M1aRIQTRRHN350LRl46lJf/8Sxdu6QCUFZeRXFJGVdMGkdERLip861WKyNHDEYIwdGjx81xFSGYNnUiy5avCXkPZyJYMw/Cw8PMMVVV4brrpvCXZx8nOiry9Jjf6OnlGQbNd3ih1dU1+AN+Es7Q6VJKPvlkKcMvGUTXrqn06JnG4iUr0bTTn++mpXVhz54cpJQcPXqc6KgoZlw7mZzcw+i6TklJObpukJSY8K3X1xrhTid/ee537Nq9n63bdrXZJioykvi4WP758jusWr2B0tIKvF4vYQ47Q4ZkEh0dfOk+rw8pMe2R1nDY7aiKgs/nDbk+csQQrv/RVF57fR6BgHZWP4BOHTvgcNiYNfs1tm/fTWVlNT6fn9iYKAYO7IvDcXq+8xbvdXVNWK0q8XGR+HwB/AGNpITo8/TRJQsWLmPTpu2AQEqDg4eOMGH8pUwYPyqkZVlZJRs3becPv/8lNpuVKyeNZ86r71FVVUNyciIAad06syJrHW63h399vIRBA/uSmBiPbhicKCzi6LHjREY4iYmNOt/H+7dITIjj1ltm8NSfgmI+7Ix6LrGxUTz5xMN88slS3nt/AVXVbwDQr19Ppk6+nMsvG20agv/Waznj/6qq8pMf38yuXY/z+hvzuPfeO87q06NHOk/9/ld8vvwLZr30GnV1DdhsNoYM6c+111zJJUMHmt7BeRE9ENApOF7GJUMy6NolkS3bD5PaMZ7LxvU7T/EpiImNoUOzDs7N/YqS0goef+whwsPDQlpu2ZoNQhATE01RUSkZ3bvi8Xo5eOiISfSU5CSampo4euw4m7fs5Oppv8Nms9I9vRsrV64nEAgQHhFOVFTE+TzeeeO6a69i+YovmPfhp9xz921n3c/s14s+f3gEr89HwK/R6GpiwcJl/P6pWURFRjJy5JBgw29xtBEe7uSen9/OE08+z7ixI9tsM2H8pYwZPQyv10dA06ipqWPOq+/x5B9e4I3Xnqdrl07AeYp3QxqEOe3ExoY3V0AwSEqM5psUPbxi4hju/skt/OynM/nbi08x+aoJ/HXWHHy+0zXWdV1n27Zd2O1Wnn3uH/zq13/k8Sf/is1q4bPFWejNNd47dEjEolpYu24rQhH06pWOoigMHdKfTZt3ciy/kO7pXbHbbOe/wPNAWJiDF/76JHv35LJ5a3ZITbvq6loWLPwcj8dLuNNJTEwUnVNTuG3mDIQQFBWXAmC320AE69KcCb/fj24YONoQ/RAU8zOum8Krr7+P2xOqAgoKCvl0URZSSiIiwomNiaZ7elfuuvNGmpqaqK6uMdueF9HtNitJCdGsWXeAopIaMvt2Zve+fLZsO3Q+3ZshTANDCMGE8Zdy/PipELeqvqGRA7mHeWn2U3w072U+nPcyH817mWefeYzc3DyzbXxCHBEREaxatYHx40YS1WykXDJ0AGVlFeTm5tGvb8+2Ld3vaNelpCQx47opPP/Cq7hcbvN6Q0Mjr78x7yxjK6iDpakGk5OTiIuLY+OmnSGHOFJK9u8/jM8XIKN7N9qCoijceccNNDQ0siJrbci94ydOMful1ygsLAq57vcHzGJGLThvnR4XF0EgoFFd3UBGegp2q5Xyijp03fhWZ+/dunUm3Olg954c+vbtiZSSBQs+p0uXTmR0TzPP/AG6de1Mhw6JZK1aT0ZGN5xhDtLTO7Nr9wFuvnG6qWISEuIYNKgfO7P30q9fr5D5LBYVIQSvvj6PiGY3CYIf70+aNJZLRw41r5yJM69cO/1Ktm7LDiFwcnISI0YM4YVZr7Izey92uw3DMMjNzSMuLpbBgzKBoPfx20cf5E/PvMj//uZpunTuhBCCmtpatu/Yzb0/v40uzWK4LURHR3L/fT/m0d8+G2IcDBzYlx490vj9H2YxfPhghCLQNJ0dO3bRq1cG3bqmmm3NmjNf7j6GrhuMGNaTAwcLcbk8jBrRyyRoZVUDh/KK6J6WTEJCFPsOHCcszNYcXj030XVdp6qmlsGDMkNO1pxhDjxeLxERTvr26Ymmaaxfv5WrrhxPj4y0kDHsdhsWiwWfP8DAAX2wWCwMHpSJalGZMvmykDhBYmI86WldmTRxbIi9ERsbgxbQ8fn8Zo5A8I9BeloXunTphJRBryI1NYUB/XsDUFNTR1KHBAb072OOZ7PZGHXpJTQ0urh05CU4nQ6sVguXTRiFxWrly137KCoqpaK8isx+vfjrc0+QlBRvrqVzagpjRg0jJzePr44WUFoWPKD65UM/Z8qUy815tIBGXV09w4cPJimxVf/OnYiPjyEhMZ7+mX0QApzOMK6eOonKqlr27D1ASUk51ZU1XDFpHI8/9hBO52nbySxKMOeNlfj8AR66fxoffLKJ0tIafvXQdKzWoDDIPXSShYu3M+WKwfTq2Yl35q0jIT6SmTeODeHKdpwZazh3jKGt+nAXdu62x/xBfp/+fx3nS7z/RAWN8xmzPRB+EeK/yum6rlNdUwdSEhcXG6IWXK4mXC43TqfDtMYhGASprq7FMCTx8THmAUcgEKC2rgGkxOGwh/Q5E/X1DURGRqAoCk1uD84wRwhHaJqGputnuUoNDY1ERkbg8/mx20NLbBuGgc/nJyws9JDG7fHQ0ODCYbcTHR1p9vF6fTQ0uhAEfe4WHRusAukmKioCTdPw+wPmPSmhqqoaCHJwXFyMaT81NblxOOzB41/dCLqCBN2++vpGpJRYLBYzAtgabXL6fyrrbeWqDezdm8Ohw0dZ1Sp6ZhgGy5avoai4hM8WZ+H1nvZBv9y1n81bssn76ihrvthsXvf5/OzevZ9PF62gurr2nHNKKXl5zrvsP3AYwzB46+1/nXWUuWnzTlav2XRW8ueLf3uT2rp69u7NwXOGX3zkaAGfzF96Vp9/fbyEwsJTfLFuc4hLt3dvLrt27efkqRLqW4WZ6+oaeGH2q3i8XvbtP8TyFaddMV3XePYv/6TwZDFFxWUhv0Uzf8FSDhw4TFFRKXlfHTPPDDweHyeLSli6bA0lpeVtxgpMTleU0wF4VT27CK2qKtCcHRv0tc8uuP91kFKSX1DIz++eicPhoKS0wrzn8/kJc4RxydCBQauzupZOnVKA4A73+/3Ex8cxoH+y2SciIpweGWk0NDaRltbla+c2dIPDh4/Q2OiiocEV8mx+f4AdO/eQkpyEruutjkqDAZOVK9eTmJhwVu3Wlas24Axz4HZ7zEiZ1+ujyeWmT+8e2O32EAPO5/ej6zqKIkJcRsMw8Hp8FOQXkv3lXmKio1vVi4Xa2noURcHhsIXUo7NYLKzfuJ1xY4ebCRUgiI6OZMigTIpOlZB5htvaApPTu3ZJwuPx0+T2kdmvC5puUF5xOmbdMSUOh8NGZVU9zjA7cbGRNDV5zxkAOBeCGyuYJNE6K6Xl31LKkErQqTwwhYAAAAKASURBVJ1SGD5sMKqisHTZGrPS8jeBalHp1q0z+/YfZOCAPiH3Ducdpby8koOHj7Jvf+hhU4ekRNLSurJj556Qk9Oi4jJyc/M4VVTKmrWnpU+wCG+QMU4UFlFXH5o4Eh0dDMq0eEQtSEvvwucr1tI5tVNIsgWAqijExcUQHRUaR7DZbFw9bSLLV6wLiZWfD8zZR43sTVOTl+MnyhnYvxs11Y3s2ZdPSnJscyjUyU0/GsWOL4/g8fq5esolrNt4gKrqRjqntn1s2BpCCC4ZMoBFi1eiqiqdU1NMfWe32/D5/Xy+fC21dfUkJpz2SevrG9i2fRexsdEkJMSGcI/NZgsJGZ4LCQnxDBrUj6FDBrAzey+iVVpScXEZf33ucTRNY+GnWQwd0t9cV1xcDCOGDyIv72iIyjt+vJBnn36MuLgY5r79EZqmNdd5tREfH8vGzTtwNTYRFxtt9omKiiT34Fc01DfSu3cPMjKCp24Wi0pKchJ33PYjvF4f+/YdbJWXKEhOTiQn5zA2q5X4+NHYbMFfkY6OjiQlOYlxY4djUdWzrPbIyHPHHUKKB+q6ga4b2GwWDEPi8wVwOEJ/qtrv11AUgcWiomnB3z07c+eeC1JKGhtdSCAqMuKMcf00NbkJCwsLCQNCMINE1w0ioyJQW0mB4HqDv2PydfB4vDiaf4gnEAiYCRmAaaS1tGttmPl8Pux2O4FAAIvFYq7X7/ebc3q8Xhx2u3kvEAjganLjsNtDxtJ1naamoI632+3mnFJK/P6AeYKnaXoItzc1udF1HSGEGX+HoLqwWa1mRejWqVzBNQbOkhot+EFWjGzHd0O7n34Rop3oFyHaiX4Rop3oFyH+H1pvLiazevGmAAAAAElFTkSuQmCC" alt="" style="box-sizing: border-box; margin: 0; max-width: 100%; padding: 0; position: relative;">
+                    </div>
+                </div>
+
+                <!-- Page Property Info -->
+                <div class="page__property-info" style="bottom: 0; box-sizing: border-box; height: 10.36cm; margin: 0; padding: 0; position: absolute; width: 100%;">
+
+                    <div class="page__property-info__background" style="box-sizing: border-box; left: 0; margin: 0; padding: 0; position: absolute; top: 0; width: 100%; z-index: -999;">
+                        <div class="bg-accent" style="background-color: var(--accent-color); box-sizing: border-box; height: 0.25cm; margin: 0; padding: 0; position: relative;">
+                        </div>
+                        <div class="bg-primary" style="background-color: var(--primary-color); box-sizing: border-box; height: 10.11cm; margin: 0; padding: 0; position: relative;">
+                        </div>
+                    </div>
+
+                    <ul class="page__property-info__list flex" style="box-sizing: border-box; display: flex; flex-direction: column; gap: 0.55cm; list-style: none; margin: 0; margin-left: 3cm; margin-right: 3cm; margin-top: 1cm; padding: 0; position: relative;">
+                        <li class="" style="box-sizing: border-box; display: flex; flex-direction: column; gap: 0.1cm; margin: 0; padding: 0; position: relative;">
+                            <p class="font-bold" style="box-sizing: border-box; color: white; font-size: 0.32cm; font-weight: 700; margin: 0; padding: 0; position: relative;">
+                                Strata Property Located at:</p>
+                            <p class="" style="box-sizing: border-box; color: white; font-size: 0.32cm; margin: 0; padding: 0; position: relative;">
+                                2A Kireep Road, Balwyn Victoria 3103</p>
+                        </li>
+
+                        <li class="" style="box-sizing: border-box; display: flex; flex-direction: column; gap: 0.1cm; margin: 0; padding: 0; position: relative;">
+                            <p class="font-bold" style="box-sizing: border-box; color: white; font-size: 0.32cm; font-weight: 700; margin: 0; padding: 0; position: relative;">
+                                Instructed by:</p>
+                            <p class="" style="box-sizing: border-box; color: white; font-size: 0.32cm; margin: 0; padding: 0; position: relative;">
+                                Peter Wilkins</p>
+                        </li>
+
+                        <li class="" style="box-sizing: border-box; display: flex; flex-direction: column; gap: 0.1cm; margin: 0; padding: 0; position: relative;">
+                            <p class="font-bold" style="box-sizing: border-box; color: white; font-size: 0.32cm; font-weight: 700; margin: 0; padding: 0; position: relative;">
+                                On Behalf of:</p>
+                            <p class="" style="box-sizing: border-box; color: white; font-size: 0.32cm; margin: 0; padding: 0; position: relative;">
+                                Owners Corporation Plan Number - SP020457M</p>
+                        </li>
+
+
+                        <li class="" style="box-sizing: border-box; display: flex; flex-direction: column; gap: 0.1cm; margin: 0; padding: 0; position: relative;">
+                            <p class="font-bold" style="box-sizing: border-box; color: white; font-size: 0.32cm; font-weight: 700; margin: 0; padding: 0; position: relative;">
+                                Purpose of Valuation:</p>
+                            <p class="" style="box-sizing: border-box; color: white; font-size: 0.32cm; margin: 0; padding: 0; position: relative;">
+                                Reinstatement &amp; Replacement Cost</p>
+                        </li>
+
+
+                        <li class="" style="box-sizing: border-box; display: flex; flex-direction: column; gap: 0.1cm; margin: 0; padding: 0; position: relative;">
+                            <p class="font-bold" style="box-sizing: border-box; color: white; font-size: 0.32cm; font-weight: 700; margin: 0; padding: 0; position: relative;">
+                                Date of Valuation</p>
+                            <p class="" style="box-sizing: border-box; color: white; font-size: 0.32cm; margin: 0; padding: 0; position: relative;">
+                                13th July 2023</p>
+                        </li>
+
+
+                        <li class="" style="box-sizing: border-box; display: flex; flex-direction: column; gap: 0.1cm; margin: 0; padding: 0; position: relative;">
+                            <p class="font-bold" style="box-sizing: border-box; color: white; font-size: 0.32cm; font-weight: 700; margin: 0; padding: 0; position: relative;">
+                                5 Year Valuation Program</p>
+                            <p class="" style="box-sizing: border-box; color: white; font-size: 0.32cm; margin: 0; padding: 0; position: relative;">
+                                Report 1 of 5</p>
+                        </li>
+
+                    </ul>
+
+                </div>
+                <!-- / Page Property Info -->
+            </div>
+            <!-- / Page Body -->
+
+
+            <!-- Page Footer -->
+            <div class="page__footer" style="bottom: 0; box-sizing: border-box; height: 1.2cm; margin: 0; padding: 0; position: absolute; width: 100%;">
+                <div class="bg-accent" style="background-color: var(--accent-color); box-sizing: border-box; height: 0.20cm; margin: 0; padding: 0; position: relative;">
+                </div>
+                <div class="bg-primary flex items-center justify-center" style="align-items: center; background-color: var(--primary-color); box-sizing: border-box; display: flex; height: 1cm; justify-content: center; margin: 0; padding: 0; position: relative;">
+                    <p class="font-bold" style="box-sizing: border-box; color: white; font-size: 0.42cm; font-weight: 700; margin: 0; padding: 0; position: relative;">
+                        Replacement Cost Insurance Valuers</p>
+                </div>
+            </div>
+            <!-- / Page Footer -->
+
+        </div>
+        <!-- / Page -->
+
+
+        <!-- Page | First Page -->
+        <div class="page first-p" style="box-sizing: border-box; height: 29.7cm; margin: 0 auto; margin-bottom: 0.25cm; padding: 0; position: relative; width: 21cm;">
+
+            <!-- Page Header -->
+            <div class="page__head" style="box-sizing: border-box; height: 1.35cm; margin: 0; padding: 0; position: relative; width: 100%;">
+                <div class="bg-primary" style="background-color: var(--primary-color); box-sizing: border-box; height: 1.15cm; margin: 0; padding: 0; position: relative;">
+                </div>
+                <div class="bg-accent" style="background-color: var(--accent-color); box-sizing: border-box; height: 0.20cm; margin: 0; padding: 0; position: relative;">
+                </div>
+            </div>
+            <!-- / Page Header -->
+
+            <!-- Page Body -->
+            <div class="page__body" style="box-sizing: border-box; height: 27.15cm; margin: 0; padding: 0; position: relative;">
+
+                <!-- logo -->
+                <div class="page__right-logo" style="box-sizing: border-box; margin: 0; margin-bottom: 1.2cm; margin-left: auto; margin-right: 2.3cm; margin-top: 1cm; padding: 0; position: relative; width: 3.56cm;">
+                    <p class="page__right-logo__company-name font-bold" style="box-sizing: border-box; font-size: 0.66cm; font-weight: 700; letter-spacing: 0cm; margin: 0; padding: 0; position: relative;">
+                        <span class="color-primary" style="box-sizing: border-box; color: var(--primary-color); margin: 0; padding: 0; position: relative;">Strata</span><span class="color-accent" style="box-sizing: border-box; color: var(--accent-color); margin: 0; padding: 0; position: relative;">Val</span>
+                    </p>
+                </div>
+                <!-- / logo -->
+
+                <div class="page__top-bar bg-primary flex items-center" style="align-items: center; background-color: var(--primary-color); border: 0.042cm solid black; box-sizing: border-box; display: flex; height: 0.76cm; margin: 0; margin-left: 2.3cm; margin-right: 2.1cm; padding: 0; padding-left: 0.15cm; position: relative;">
+                    <p class="font-bold" style="box-sizing: border-box; color: white; font-size: 0.32cm; font-weight: 700; margin: 0; padding: 0; position: relative;">
+                        Table Of Contents</p>
+                </div>
+
+                <!-- Table Of Content -->
+                <div class="page__toc" style="box-sizing: border-box; margin: 0; margin-left: 2.25cm; margin-right: 2.1cm; margin-top: 0.65cm; padding: 0; position: relative;">
+
+                    <ol class="toc__root-list" style="box-sizing: border-box; counter-reset: root-level-item; list-style-type: none; margin: 0; padding: 0; padding-left: 0.2cm; padding-right: 0.2cm; position: relative;">
+                        <li class="" style="box-sizing: border-box; display: flex; flex-wrap: wrap; margin: 0; padding: 0; position: relative;">
+                            <span class="font-bold" style="align-items: center; box-sizing: border-box; display: inline-flex; flex: 1; font-size: 0.28cm; font-weight: 700; justify-content: space-between; margin: 0; padding: 0; position: relative;">
+                                Engagement Details
+                                <span class="font-bold" style="box-sizing: border-box; font-weight: 700; margin: 0; padding: 0; position: relative;">2</span>
+                            </span>
+                            <ol class="toc__second-level-list" style="box-sizing: border-box; counter-reset: second-level-item; flex: 0 0 100%; list-style-type: none; margin: 0; margin-top: 0.15cm; overflow: hidden; padding: 0; padding-left: 0.28cm; position: relative;">
+                                <li class="" style="align-items: center; box-sizing: border-box; display: flex; margin: 0; margin-bottom: 0.15cm; overflow: hidden; padding: 0; position: relative;">
+                                    <span class="" style="box-sizing: border-box; display: flex; flex: 1; font-size: 0.28cm; margin: 0; overflow: hidden; padding: 0; position: relative;">Property
+                                        Address</span>
+                                    <span class="toc__page-n" style="box-sizing: border-box; display: flex; flex: 0 0 auto; font-size: 0.28cm; margin: 0; overflow: hidden; padding: 0; position: relative;">2</span>
+                                </li>
+
+                                <li class="" style="align-items: center; box-sizing: border-box; display: flex; margin: 0; margin-bottom: 0.15cm; overflow: hidden; padding: 0; position: relative;">
+                                    <span class="" style="box-sizing: border-box; display: flex; flex: 1; font-size: 0.28cm; margin: 0; overflow: hidden; padding: 0; position: relative;">Instructing
+                                        Party</span>
+                                    <span class="toc__page-n" style="box-sizing: border-box; display: flex; flex: 0 0 auto; font-size: 0.28cm; margin: 0; overflow: hidden; padding: 0; position: relative;">2</span>
+                                </li>
+
+                                <li class="" style="align-items: center; box-sizing: border-box; display: flex; margin: 0; margin-bottom: 0.15cm; overflow: hidden; padding: 0; position: relative;">
+                                    <span class="" style="box-sizing: border-box; display: flex; flex: 1; font-size: 0.28cm; margin: 0; overflow: hidden; padding: 0; position: relative;">Purpose
+                                        of Valuation</span>
+                                    <span class="toc__page-n" style="box-sizing: border-box; display: flex; flex: 0 0 auto; font-size: 0.28cm; margin: 0; overflow: hidden; padding: 0; position: relative;">2</span>
+                                </li>
+
+                                <li class="" style="align-items: center; box-sizing: border-box; display: flex; margin: 0; margin-bottom: 0.15cm; overflow: hidden; padding: 0; position: relative;">
+                                    <span class="" style="box-sizing: border-box; display: flex; flex: 1; font-size: 0.28cm; margin: 0; overflow: hidden; padding: 0; position: relative;">Instructions</span>
+                                    <span class="toc__page-n" style="box-sizing: border-box; display: flex; flex: 0 0 auto; font-size: 0.28cm; margin: 0; overflow: hidden; padding: 0; position: relative;">2</span>
+                                </li>
+
+                                <li class="" style="align-items: center; box-sizing: border-box; display: flex; margin: 0; margin-bottom: 0.15cm; overflow: hidden; padding: 0; position: relative;">
+                                    <span class="" style="box-sizing: border-box; display: flex; flex: 1; font-size: 0.28cm; margin: 0; overflow: hidden; padding: 0; position: relative;">Scope
+                                        of Work</span>
+                                    <span class="toc__page-n" style="box-sizing: border-box; display: flex; flex: 0 0 auto; font-size: 0.28cm; margin: 0; overflow: hidden; padding: 0; position: relative;">2</span>
+                                </li>
+
+                                <li class="" style="align-items: center; box-sizing: border-box; display: flex; margin: 0; margin-bottom: 0.15cm; overflow: hidden; padding: 0; position: relative;">
+                                    <span class="" style="box-sizing: border-box; display: flex; flex: 1; font-size: 0.28cm; margin: 0; overflow: hidden; padding: 0; position: relative;">Date
+                                        of Valuation</span>
+                                    <span class="toc__page-n" style="box-sizing: border-box; display: flex; flex: 0 0 auto; font-size: 0.28cm; margin: 0; overflow: hidden; padding: 0; position: relative;">2</span>
+                                </li>
+
+                                <li class="" style="align-items: center; box-sizing: border-box; display: flex; margin: 0; margin-bottom: 0.05cm; overflow: hidden; padding: 0; position: relative;">
+                                    <span class="" style="box-sizing: border-box; display: flex; flex: 1; font-size: 0.28cm; margin: 0; overflow: hidden; padding: 0; position: relative;">Valuers
+                                        Interest</span>
+                                    <span class="toc__page-n" style="box-sizing: border-box; display: flex; flex: 0 0 auto; font-size: 0.28cm; margin: 0; overflow: hidden; padding: 0; position: relative;">2</span>
+                                </li>
+                            </ol>
+                        </li>
+
+                        <li class="" style="box-sizing: border-box; display: flex; flex-wrap: wrap; margin: 0; padding: 0; position: relative;">
+                            <span class="font-bold" style="align-items: center; box-sizing: border-box; display: inline-flex; flex: 1; font-size: 0.28cm; font-weight: 700; justify-content: space-between; margin: 0; padding: 0; position: relative;">
+                                Land Details
+                                <span class="font-bold" style="box-sizing: border-box; font-weight: 700; margin: 0; padding: 0; position: relative;">3</span>
+                            </span>
+                            <ol class="toc__second-level-list" style="box-sizing: border-box; counter-reset: second-level-item; flex: 0 0 100%; list-style-type: none; margin: 0; margin-top: 0.15cm; overflow: hidden; padding: 0; padding-left: 0.28cm; position: relative;">
+                                <li class="" style="align-items: center; box-sizing: border-box; display: flex; margin: 0; margin-bottom: 0.15cm; overflow: hidden; padding: 0; position: relative;">
+                                    <span class="" style="box-sizing: border-box; display: flex; flex: 1; font-size: 0.28cm; margin: 0; overflow: hidden; padding: 0; position: relative;">Plan
+                                        Reference</span>
+                                    <span class="toc__page-n" style="box-sizing: border-box; display: flex; flex: 0 0 auto; font-size: 0.28cm; margin: 0; overflow: hidden; padding: 0; position: relative;">3</span>
+                                </li>
+
+                                <li class="" style="align-items: center; box-sizing: border-box; display: flex; margin: 0; margin-bottom: 0.15cm; overflow: hidden; padding: 0; position: relative;">
+                                    <span class="" style="box-sizing: border-box; display: flex; flex: 1; font-size: 0.28cm; margin: 0; overflow: hidden; padding: 0; position: relative;">Site
+                                        Area</span>
+                                    <span class="toc__page-n" style="box-sizing: border-box; display: flex; flex: 0 0 auto; font-size: 0.28cm; margin: 0; overflow: hidden; padding: 0; position: relative;">3</span>
+                                </li>
+
+                                <li class="" style="align-items: center; box-sizing: border-box; display: flex; margin: 0; margin-bottom: 0.15cm; overflow: hidden; padding: 0; position: relative;">
+                                    <span class="" style="box-sizing: border-box; display: flex; flex: 1; font-size: 0.28cm; margin: 0; overflow: hidden; padding: 0; position: relative;">Site
+                                        Layout</span>
+                                    <span class="toc__page-n" style="box-sizing: border-box; display: flex; flex: 0 0 auto; font-size: 0.28cm; margin: 0; overflow: hidden; padding: 0; position: relative;">3</span>
+                                </li>
+
+                                <li class="" style="align-items: center; box-sizing: border-box; display: flex; margin: 0; margin-bottom: 0.15cm; overflow: hidden; padding: 0; position: relative;">
+                                    <span class="" style="box-sizing: border-box; display: flex; flex: 1; font-size: 0.28cm; margin: 0; overflow: hidden; padding: 0; position: relative;">Zoning</span>
+                                    <span class="toc__page-n" style="box-sizing: border-box; display: flex; flex: 0 0 auto; font-size: 0.28cm; margin: 0; overflow: hidden; padding: 0; position: relative;">3</span>
+                                </li>
+
+                                <li class="" style="align-items: center; box-sizing: border-box; display: flex; margin: 0; margin-bottom: 0.15cm; overflow: hidden; padding: 0; position: relative;">
+                                    <span class="" style="box-sizing: border-box; display: flex; flex: 1; font-size: 0.28cm; margin: 0; overflow: hidden; padding: 0; position: relative;">Overlays</span>
+                                    <span class="toc__page-n" style="box-sizing: border-box; display: flex; flex: 0 0 auto; font-size: 0.28cm; margin: 0; overflow: hidden; padding: 0; position: relative;">3</span>
+                                </li>
+
+                                <li class="" style="align-items: center; box-sizing: border-box; display: flex; margin: 0; margin-bottom: 0.15cm; overflow: hidden; padding: 0; position: relative;">
+                                    <span class="" style="box-sizing: border-box; display: flex; flex: 1; font-size: 0.28cm; margin: 0; overflow: hidden; padding: 0; position: relative;">Easements</span>
+                                    <span class="toc__page-n" style="box-sizing: border-box; display: flex; flex: 0 0 auto; font-size: 0.28cm; margin: 0; overflow: hidden; padding: 0; position: relative;">3</span>
+                                </li>
+
+                                <li class="" style="align-items: center; box-sizing: border-box; display: flex; margin: 0; margin-bottom: 0.15cm; overflow: hidden; padding: 0; position: relative;">
+                                    <span class="" style="box-sizing: border-box; display: flex; flex: 1; font-size: 0.28cm; margin: 0; overflow: hidden; padding: 0; position: relative;">Location
+                                        Map</span>
+                                    <span class="toc__page-n" style="box-sizing: border-box; display: flex; flex: 0 0 auto; font-size: 0.28cm; margin: 0; overflow: hidden; padding: 0; position: relative;">3</span>
+                                </li>
+
+                                <li class="" style="align-items: center; box-sizing: border-box; display: flex; margin: 0; margin-bottom: 0.15cm; overflow: hidden; padding: 0; position: relative;">
+                                    <span class="" style="box-sizing: border-box; display: flex; flex: 1; font-size: 0.28cm; margin: 0; overflow: hidden; padding: 0; position: relative;">Town
+                                        Planning</span>
+                                    <span class="toc__page-n" style="box-sizing: border-box; display: flex; flex: 0 0 auto; font-size: 0.28cm; margin: 0; overflow: hidden; padding: 0; position: relative;">3</span>
+                                </li>
+
+                                <li class="" style="align-items: center; box-sizing: border-box; display: flex; margin: 0; margin-bottom: 0.15cm; overflow: hidden; padding: 0; position: relative;">
+                                    <span class="" style="box-sizing: border-box; display: flex; flex: 1; font-size: 0.28cm; margin: 0; overflow: hidden; padding: 0; position: relative;">Contamination</span>
+                                    <span class="toc__page-n" style="box-sizing: border-box; display: flex; flex: 0 0 auto; font-size: 0.28cm; margin: 0; overflow: hidden; padding: 0; position: relative;">4</span>
+                                </li>
+
+                                <li class="" style="align-items: center; box-sizing: border-box; display: flex; margin: 0; margin-bottom: 0.05cm; overflow: hidden; padding: 0; position: relative;">
+                                    <span class="" style="box-sizing: border-box; display: flex; flex: 1; font-size: 0.28cm; margin: 0; overflow: hidden; padding: 0; position: relative;">Other
+                                        Environmental Issues</span>
+                                    <span class="toc__page-n" style="box-sizing: border-box; display: flex; flex: 0 0 auto; font-size: 0.28cm; margin: 0; overflow: hidden; padding: 0; position: relative;">4</span>
+                                </li>
+                            </ol>
+                        </li>
+
+                        <li class="" style="box-sizing: border-box; display: flex; flex-wrap: wrap; margin: 0; padding: 0; position: relative;">
+                            <span class="font-bold" style="align-items: center; box-sizing: border-box; display: inline-flex; flex: 1; font-size: 0.28cm; font-weight: 700; justify-content: space-between; margin: 0; padding: 0; position: relative;">
+                                Property Details
+                                <span class="font-bold" style="box-sizing: border-box; font-weight: 700; margin: 0; padding: 0; position: relative;">5</span>
+                            </span>
+                            <ol class="toc__second-level-list" style="box-sizing: border-box; counter-reset: second-level-item; flex: 0 0 100%; list-style-type: none; margin: 0; margin-top: 0.15cm; overflow: hidden; padding: 0; padding-left: 0.28cm; position: relative;">
+                                <li class="" style="align-items: center; box-sizing: border-box; display: flex; margin: 0; margin-bottom: 0.15cm; overflow: hidden; padding: 0; position: relative;">
+                                    <span class="" style="box-sizing: border-box; display: flex; flex: 1; font-size: 0.28cm; margin: 0; overflow: hidden; padding: 0; position: relative;">Brief
+                                        Description</span>
+                                    <span class="toc__page-n" style="box-sizing: border-box; display: flex; flex: 0 0 auto; font-size: 0.28cm; margin: 0; overflow: hidden; padding: 0; position: relative;">5</span>
+                                </li>
+
+                                <li class="" style="align-items: center; box-sizing: border-box; display: flex; margin: 0; margin-bottom: 0.15cm; overflow: hidden; padding: 0; position: relative;">
+                                    <span class="" style="box-sizing: border-box; display: flex; flex: 1; font-size: 0.28cm; margin: 0; overflow: hidden; padding: 0; position: relative;">Ancillary
+                                        Improvements</span>
+                                    <span class="toc__page-n" style="box-sizing: border-box; display: flex; flex: 0 0 auto; font-size: 0.28cm; margin: 0; overflow: hidden; padding: 0; position: relative;">5</span>
+                                </li>
+
+                                <li class="" style="align-items: center; box-sizing: border-box; display: flex; margin: 0; margin-bottom: 0.15cm; overflow: hidden; padding: 0; position: relative;">
+                                    <span class="" style="box-sizing: border-box; display: flex; flex: 1; font-size: 0.28cm; margin: 0; overflow: hidden; padding: 0; position: relative;">Site
+                                        Improvements</span>
+                                    <span class="toc__page-n" style="box-sizing: border-box; display: flex; flex: 0 0 auto; font-size: 0.28cm; margin: 0; overflow: hidden; padding: 0; position: relative;">5</span>
+                                </li>
+
+                                <li class="" style="align-items: center; box-sizing: border-box; display: flex; margin: 0; margin-bottom: 0.15cm; overflow: hidden; padding: 0; position: relative;">
+                                    <span class="" style="box-sizing: border-box; display: flex; flex: 1; font-size: 0.28cm; margin: 0; overflow: hidden; padding: 0; position: relative;">Gross
+                                        Building Area</span>
+                                    <span class="toc__page-n" style="box-sizing: border-box; display: flex; flex: 0 0 auto; font-size: 0.28cm; margin: 0; overflow: hidden; padding: 0; position: relative;">5</span>
+                                </li>
+
+                                <li class="" style="align-items: center; box-sizing: border-box; display: flex; margin: 0; margin-bottom: 0.05cm; overflow: hidden; padding: 0; position: relative;">
+                                    <span class="" style="box-sizing: border-box; display: flex; flex: 1; font-size: 0.28cm; margin: 0; overflow: hidden; padding: 0; position: relative;">Hazardous
+                                        Materials</span>
+                                    <span class="toc__page-n" style="box-sizing: border-box; display: flex; flex: 0 0 auto; font-size: 0.28cm; margin: 0; overflow: hidden; padding: 0; position: relative;">5</span>
+                                </li>
+                            </ol>
+                        </li>
+
+                        <li class="" style="box-sizing: border-box; display: flex; flex-wrap: wrap; margin: 0; padding: 0; position: relative;">
+                            <span class="font-bold" style="align-items: center; box-sizing: border-box; display: inline-flex; flex: 1; font-size: 0.28cm; font-weight: 700; justify-content: space-between; margin: 0; padding: 0; position: relative;">Valuation
+                                Details
+                                <span class="font-bold" style="box-sizing: border-box; font-weight: 700; margin: 0; padding: 0; position: relative;">6</span>
+                            </span>
+                            <ol class="toc__second-level-list" style="box-sizing: border-box; counter-reset: second-level-item; flex: 0 0 100%; list-style-type: none; margin: 0; margin-top: 0.15cm; overflow: hidden; padding: 0; padding-left: 0.28cm; position: relative;">
+                                <li class="" style="align-items: center; box-sizing: border-box; display: flex; margin: 0; margin-bottom: 0.15cm; overflow: hidden; padding: 0; position: relative;">
+                                    <span class="" style="box-sizing: border-box; display: flex; flex: 1; font-size: 0.28cm; margin: 0; overflow: hidden; padding: 0; position: relative;">Statement
+                                        of Purpose</span>
+                                    <span class="toc__page-n" style="box-sizing: border-box; display: flex; flex: 0 0 auto; font-size: 0.28cm; margin: 0; overflow: hidden; padding: 0; position: relative;">6</span>
+                                </li>
+
+                                <li class="" style="align-items: center; box-sizing: border-box; display: flex; margin: 0; margin-bottom: 0.15cm; overflow: hidden; padding: 0; position: relative;">
+                                    <span class="" style="box-sizing: border-box; display: flex; flex: 1; font-size: 0.28cm; margin: 0; overflow: hidden; padding: 0; position: relative;">Valuation
+                                        Methodolgy</span>
+                                    <span class="toc__page-n" style="box-sizing: border-box; display: flex; flex: 0 0 auto; font-size: 0.28cm; margin: 0; overflow: hidden; padding: 0; position: relative;">6</span>
+                                </li>
+
+                                <li class="" style="align-items: center; box-sizing: border-box; display: flex; margin: 0; margin-bottom: 0.15cm; overflow: hidden; padding: 0; position: relative;">
+                                    <span class="" style="box-sizing: border-box; display: flex; flex: 1; font-size: 0.28cm; margin: 0; overflow: hidden; padding: 0; position: relative;">Reinstatement
+                                        Cost</span>
+                                    <span class="toc__page-n" style="box-sizing: border-box; display: flex; flex: 0 0 auto; font-size: 0.28cm; margin: 0; overflow: hidden; padding: 0; position: relative;">7</span>
+                                </li>
+
+                                <li class="" style="align-items: center; box-sizing: border-box; display: flex; margin: 0; margin-bottom: 0.15cm; overflow: hidden; padding: 0; position: relative;">
+                                    <span class="" style="box-sizing: border-box; display: flex; flex: 1; font-size: 0.28cm; margin: 0; overflow: hidden; padding: 0; position: relative;">Basis
+                                        of Estimate</span>
+                                    <span class="toc__page-n" style="box-sizing: border-box; display: flex; flex: 0 0 auto; font-size: 0.28cm; margin: 0; overflow: hidden; padding: 0; position: relative;">7</span>
+                                </li>
+
+                                <li class="" style="align-items: center; box-sizing: border-box; display: flex; margin: 0; margin-bottom: 0.15cm; overflow: hidden; padding: 0; position: relative;">
+                                    <span class="" style="box-sizing: border-box; display: flex; flex: 1; font-size: 0.28cm; margin: 0; overflow: hidden; padding: 0; position: relative;">Demolition
+                                        Cost</span>
+                                    <span class="toc__page-n" style="box-sizing: border-box; display: flex; flex: 0 0 auto; font-size: 0.28cm; margin: 0; overflow: hidden; padding: 0; position: relative;">7</span>
+                                </li>
+
+                                <li class="" style="align-items: center; box-sizing: border-box; display: flex; margin: 0; margin-bottom: 0.15cm; overflow: hidden; padding: 0; position: relative;">
+                                    <span class="" style="box-sizing: border-box; display: flex; flex: 1; font-size: 0.28cm; margin: 0; overflow: hidden; padding: 0; position: relative;">Professional
+                                        Fees</span>
+                                    <span class="toc__page-n" style="box-sizing: border-box; display: flex; flex: 0 0 auto; font-size: 0.28cm; margin: 0; overflow: hidden; padding: 0; position: relative;">7</span>
+                                </li>
+
+                                <li class="" style="align-items: center; box-sizing: border-box; display: flex; margin: 0; margin-bottom: 0.15cm; overflow: hidden; padding: 0; position: relative;">
+                                    <span class="" style="box-sizing: border-box; display: flex; flex: 1; font-size: 0.28cm; margin: 0; overflow: hidden; padding: 0; position: relative;">Escalation
+                                        Cost</span>
+                                    <span class="toc__page-n" style="box-sizing: border-box; display: flex; flex: 0 0 auto; font-size: 0.28cm; margin: 0; overflow: hidden; padding: 0; position: relative;">8</span>
+                                </li>
+
+                                <li class="" style="align-items: center; box-sizing: border-box; display: flex; margin: 0; margin-bottom: 0.15cm; overflow: hidden; padding: 0; position: relative;">
+                                    <span class="" style="box-sizing: border-box; display: flex; flex: 1; font-size: 0.28cm; margin: 0; overflow: hidden; padding: 0; position: relative;">Goods
+                                        &amp; Services Tax</span>
+                                    <span class="toc__page-n" style="box-sizing: border-box; display: flex; flex: 0 0 auto; font-size: 0.28cm; margin: 0; overflow: hidden; padding: 0; position: relative;">8</span>
+                                </li>
+
+                                <li class="" style="align-items: center; box-sizing: border-box; display: flex; margin: 0; margin-bottom: 0.15cm; overflow: hidden; padding: 0; position: relative;">
+                                    <span class="" style="box-sizing: border-box; display: flex; flex: 1; font-size: 0.28cm; margin: 0; overflow: hidden; padding: 0; position: relative;">Exclusions</span>
+                                    <span class="toc__page-n" style="box-sizing: border-box; display: flex; flex: 0 0 auto; font-size: 0.28cm; margin: 0; overflow: hidden; padding: 0; position: relative;">8</span>
+                                </li>
+
+                                <li class="" style="align-items: center; box-sizing: border-box; display: flex; margin: 0; margin-bottom: 0.15cm; overflow: hidden; padding: 0; position: relative;">
+                                    <span class="" style="box-sizing: border-box; display: flex; flex: 1; font-size: 0.28cm; margin: 0; overflow: hidden; padding: 0; position: relative;">Inclusions</span>
+                                    <span class="toc__page-n" style="box-sizing: border-box; display: flex; flex: 0 0 auto; font-size: 0.28cm; margin: 0; overflow: hidden; padding: 0; position: relative;">9</span>
+                                </li>
+
+                                <li class="" style="align-items: center; box-sizing: border-box; display: flex; margin: 0; margin-bottom: 0.05cm; overflow: hidden; padding: 0; position: relative;">
+                                    <span class="" style="box-sizing: border-box; display: flex; flex: 1; font-size: 0.28cm; margin: 0; overflow: hidden; padding: 0; position: relative;">Valuation
+                                        Assessment</span>
+                                    <span class="toc__page-n" style="box-sizing: border-box; display: flex; flex: 0 0 auto; font-size: 0.28cm; margin: 0; overflow: hidden; padding: 0; position: relative;">10</span>
+                                </li>
+                            </ol>
+                        </li>
+
+                        <span class="font-bold flex justify-between" style="box-sizing: border-box; display: flex; font-size: 0.28cm; font-weight: 700; justify-content: space-between; margin: 0; padding: 0; position: relative;">Appendix
+                            <span class="font-bold" style="box-sizing: border-box; font-weight: 700; margin: 0; padding: 0; position: relative;">11</span>
+                        </span>
+                    </ol>
+
+                </div>
+                <!-- / Table Of Content -->
+
+            </div>
+            <!-- / Page Body -->
+
+            <!-- Page Footer -->
+            <div class="page__footer" style="bottom: 0; box-sizing: border-box; height: 1.2cm; margin: 0; padding: 0; position: absolute; width: 100%;">
+                <div class="bg-accent" style="background-color: var(--accent-color); box-sizing: border-box; height: 0.20cm; margin: 0; padding: 0; position: relative;">
+                </div>
+                <div class="bg-primary flex items-center justify-center" style="align-items: center; background-color: var(--primary-color); box-sizing: border-box; display: flex; height: 1cm; justify-content: center; margin: 0; padding: 0; position: relative;">
+                    <p class="font-bold" style="box-sizing: border-box; color: white; font-size: 0.42cm; font-weight: 700; margin: 0; padding: 0; position: relative;">
+                        Replacement Cost Insurance Valuers</p>
+                </div>
+            </div>
+            <!-- / Page Footer -->
+
+        </div>
+        <!-- / Page -->
+
+
+        <!-- Page | Second Page | Empty -->
+        <div class="page" style="box-sizing: border-box; height: 29.7cm; margin: 0 auto; margin-bottom: 0.25cm; padding: 0; position: relative; width: 21cm;">
+
+            <!-- Page Header -->
+            <div class="page__head" style="box-sizing: border-box; height: 1.35cm; margin: 0; padding: 0; position: relative; width: 100%;">
+                <div class="bg-primary" style="background-color: var(--primary-color); box-sizing: border-box; height: 1.15cm; margin: 0; padding: 0; position: relative;">
+                </div>
+                <div class="bg-accent" style="background-color: var(--accent-color); box-sizing: border-box; height: 0.20cm; margin: 0; padding: 0; position: relative;">
+                </div>
+            </div>
+            <!-- / Page Header -->
+
+            <!-- Page Body -->
+            <div class="page__body" style="box-sizing: border-box; height: 27.15cm; margin: 0; padding: 0; position: relative;">
+
+                <!-- logo -->
+                <div class="page__right-logo" style="box-sizing: border-box; margin: 0; margin-bottom: 1.2cm; margin-left: auto; margin-right: 2.3cm; margin-top: 1cm; padding: 0; position: relative; width: 3.56cm;">
+                    <p class="page__right-logo__company-name font-bold" style="box-sizing: border-box; font-size: 0.66cm; font-weight: 700; letter-spacing: 0cm; margin: 0; padding: 0; position: relative;">
+                        <span class="color-primary" style="box-sizing: border-box; color: var(--primary-color); margin: 0; padding: 0; position: relative;">Strata</span><span class="color-accent" style="box-sizing: border-box; color: var(--accent-color); margin: 0; padding: 0; position: relative;">Val</span>
+                    </p>
+                </div>
+                <!-- / logo -->
+
+            </div>
+            <!-- / Page Body -->
+
+            <!-- Page Footer -->
+            <div class="page__footer" style="bottom: 0; box-sizing: border-box; height: 1.2cm; margin: 0; padding: 0; position: absolute; width: 100%;">
+                <div class="bg-accent" style="background-color: var(--accent-color); box-sizing: border-box; height: 0.20cm; margin: 0; padding: 0; position: relative;">
+                </div>
+                <div class="bg-primary flex items-center justify-center" style="align-items: center; background-color: var(--primary-color); box-sizing: border-box; display: flex; height: 1cm; justify-content: center; margin: 0; padding: 0; position: relative;">
+                    <p class="font-bold" style="box-sizing: border-box; color: white; font-size: 0.42cm; font-weight: 700; margin: 0; padding: 0; position: relative;">
+                        Replacement Cost Insurance Valuers</p>
+                </div>
+            </div>
+            <!-- / Page Footer -->
+
+        </div>
+        <!-- / Page -->
+
+
+        <!-- Page | Third Page -->
+        <div class="page third-p" style="box-sizing: border-box; height: 29.7cm; margin: 0 auto; margin-bottom: 0.25cm; padding: 0; position: relative; width: 21cm;">
+
+            <!-- Page Header -->
+            <div class="page__head" style="box-sizing: border-box; height: 1.35cm; margin: 0; padding: 0; position: relative; width: 100%;">
+                <div class="bg-primary" style="background-color: var(--primary-color); box-sizing: border-box; height: 1.15cm; margin: 0; padding: 0; position: relative;">
+                </div>
+                <div class="bg-accent" style="background-color: var(--accent-color); box-sizing: border-box; height: 0.20cm; margin: 0; padding: 0; position: relative;">
+                </div>
+            </div>
+            <!-- / Page Header -->
+
+            <!-- Page Body -->
+            <div class="page__body" style="box-sizing: border-box; height: 27.15cm; margin: 0; padding: 0; position: relative;">
+
+                <!-- logo -->
+                <div class="page__right-logo" style="box-sizing: border-box; margin: 0; margin-bottom: 0.8cm; margin-left: auto; margin-right: 2.3cm; margin-top: 1cm; padding: 0; position: relative; width: 3.56cm;">
+                    <p class="page__right-logo__company-name font-bold" style="box-sizing: border-box; font-size: 0.66cm; font-weight: 700; letter-spacing: 0cm; margin: 0; padding: 0; position: relative;">
+                        <span class="color-primary" style="box-sizing: border-box; color: var(--primary-color); margin: 0; padding: 0; position: relative;">Strata</span><span class="color-accent" style="box-sizing: border-box; color: var(--accent-color); margin: 0; padding: 0; position: relative;">Val</span>
+                    </p>
+                </div>
+                <!-- / logo -->
+
+                <!-- Top Bar -->
+                <div class="page__top-bar bg-primary flex items-center" style="align-items: center; background-color: var(--primary-color); border: 0.042cm solid black; box-sizing: border-box; display: flex; height: 0.76cm; margin: 0; margin-left: 2.3cm; margin-right: 2.1cm; padding: 0; padding-left: 0.15cm; position: relative;">
+                    <p class="font-bold" style="box-sizing: border-box; color: white; font-size: 0.32cm; font-weight: 700; margin: 0; padding: 0; position: relative;">
+                        <span class="chapter-info__h2__num" style="box-sizing: border-box; margin: 0; padding: 0; position: relative;">1.</span>
+                        <span class="chapter-info__h2__text" style="box-sizing: border-box; margin: 0; padding: 0; position: relative;">Engagement
+                            Details</span>
+                    </p>
+                </div>
+                <!-- / Top Bar -->
+
+                <!-- Chapter Info -->
+                <div class="chapter-info" style="box-sizing: border-box; margin: 0 2cm; margin-top: 0.71cm; padding: 0; position: relative;">
+
+                    <!-- I defined a css variables --info-list-counter on the element below -->
+                    <!-- You can change that to change the first number -->
+                    <!-- on the numbering system -->
+                    <!-- it will change the x variable -->
+
+                    <!-- x.1 -->
+                    <!-- x.2 -->
+                    <!-- x.3 -->
+                    <ol class="chapter-info__info-list" style="--info-list-counter-var: '1'; box-sizing: border-box; counter-reset: info-list-counter; display: flex; flex-direction: column; gap: 0.4cm; list-style: none; margin: 0; padding: 0; padding-left: 0.35cm; padding-right: 1cm; position: relative;">
+
+                        <li class="chapter-info__info-list__li" style="box-sizing: border-box; counter-increment: info-list-counter 1; display: flex; margin: 0; padding: 0; position: relative;">
+                            <span class="chapter-info__info-list__title font-bold" style="box-sizing: border-box; flex: 0 0 3.27cm; font-size: 0.3cm; font-weight: 700; letter-spacing: -0.02cm; margin: 0; margin-left: 0.56cm; padding: 0; position: relative;">Property
+                                Address</span>
+                            <span class="chapter-info__info-list__value" style="box-sizing: border-box; display: flex; flex: 1; flex-direction: column; font-size: 0.3cm; gap: 0.4cm; letter-spacing: -0.02cm; line-height: 0.44cm; margin: 0; margin-left: 0.71cm; padding: 0; position: relative;">2A
+                                Kireep Road, Balwyn Victoria 3103</span>
+                        </li>
+
+                        <li class="chapter-info__info-list__li" style="box-sizing: border-box; counter-increment: info-list-counter 1; display: flex; margin: 0; padding: 0; position: relative;">
+                            <span class="chapter-info__info-list__title font-bold" style="box-sizing: border-box; flex: 0 0 3.27cm; font-size: 0.3cm; font-weight: 700; letter-spacing: -0.02cm; margin: 0; margin-left: 0.56cm; padding: 0; position: relative;">Instructing
+                                Party:</span>
+                            <span class="chapter-info__info-list__value" style="box-sizing: border-box; display: flex; flex: 1; flex-direction: column; font-size: 0.3cm; gap: 0.4cm; letter-spacing: -0.02cm; line-height: 0.44cm; margin: 0; margin-left: 0.71cm; padding: 0; position: relative;">Peter
+                                Wilkins on behalf of Owners Corporation
+                                Plan
+                                Number SP020457M.
+                            </span>
+                        </li>
+
+                        <li class="chapter-info__info-list__li" style="box-sizing: border-box; counter-increment: info-list-counter 1; display: flex; margin: 0; padding: 0; position: relative;">
+                            <span class="chapter-info__info-list__title font-bold" style="box-sizing: border-box; flex: 0 0 3.27cm; font-size: 0.3cm; font-weight: 700; letter-spacing: -0.02cm; margin: 0; margin-left: 0.56cm; padding: 0; position: relative;">Purpose
+                                of Valuation</span>
+                            <span class="chapter-info__info-list__value" style="box-sizing: border-box; display: flex; flex: 1; flex-direction: column; font-size: 0.3cm; gap: 0.4cm; letter-spacing: -0.02cm; line-height: 0.44cm; margin: 0; margin-left: 0.71cm; padding: 0; position: relative;">Reinstatement
+                                &amp; Replacement Assessment</span>
+                        </li>
+
+
+                        <li class="chapter-info__info-list__li" style="box-sizing: border-box; counter-increment: info-list-counter 1; display: flex; margin: 0; padding: 0; position: relative;">
+                            <span class="chapter-info__info-list__title font-bold" style="box-sizing: border-box; flex: 0 0 3.27cm; font-size: 0.3cm; font-weight: 700; letter-spacing: -0.02cm; margin: 0; margin-left: 0.56cm; padding: 0; position: relative;">Instructions</span>
+                            <span class="chapter-info__info-list__value" style="box-sizing: border-box; display: flex; flex: 1; flex-direction: column; font-size: 0.3cm; gap: 0.4cm; letter-spacing: -0.02cm; line-height: 0.44cm; margin: 0; margin-left: 0.71cm; padding: 0; position: relative;"><span class="" style="box-sizing: border-box; margin: 0; padding: 0; position: relative;">
+                                    This report has been commissioned by Peter Wilkins
+                                    on behalf of Owners
+                                    Corporation Plan Number SP020457M. The purpose of the report is to determinethe
+                                    replacementvaluationfor insurance purposes of 2A Kireep Road, Balwyn Victoria 3103.
+                                </span>
+                                <span class="" style="box-sizing: border-box; margin: 0; padding: 0; position: relative;">
+                                    This valuation is for the use ONLY of the party to which it is addressed, its
+                                    nominated
+                                    broker, and its nominated insurer.
+                                </span>
+
+
+                                <span class="" style="box-sizing: border-box; margin: 0; padding: 0; position: relative;">
+                                    No responsibility is accepted or undertaken to ANY other parties in relation to this
+                                    valuation and report. No other party may include any part of this valuation or refer
+                                    to
+                                    it in any document, circular or statement without the prior written consent of the
+                                    valuer.
+                                </span>
+                            </span>
+                        </li>
+
+                        <li class="chapter-info__info-list__li" style="box-sizing: border-box; counter-increment: info-list-counter 1; display: flex; margin: 0; padding: 0; position: relative;">
+                            <span class="chapter-info__info-list__title font-bold" style="box-sizing: border-box; flex: 0 0 3.27cm; font-size: 0.3cm; font-weight: 700; letter-spacing: -0.02cm; margin: 0; margin-left: 0.56cm; padding: 0; position: relative;">Scope
+                                of Work</span>
+                            <span class="chapter-info__info-list__value" style="box-sizing: border-box; display: flex; flex: 1; flex-direction: column; font-size: 0.3cm; gap: 0.4cm; letter-spacing: -0.02cm; line-height: 0.44cm; margin: 0; margin-left: 0.71cm; padding: 0; position: relative;">
+                                <span class="" style="box-sizing: border-box; margin: 0; padding: 0; position: relative;">
+                                    Our investigations include but are not limited
+                                    to an
+                                    on-site external
+                                    inspection only of the subject property, collection of data from the instructing
+                                    party,
+                                    government databases, third party sources and the preparation of calculations
+                                    relevant
+                                    to this valuation report.
+                                </span>
+
+                                <span class="" style="box-sizing: border-box; margin: 0; padding: 0; position: relative;">
+                                    Annual updates assume no significant change to the building structure, ancillary
+                                    improvements and services connected. Annual updates have not had a physical
+                                    inspection
+                                    carried out.
+                                </span>
+                            </span>
+                        </li>
+
+                        <li class="chapter-info__info-list__li" style="box-sizing: border-box; counter-increment: info-list-counter 1; display: flex; margin: 0; padding: 0; position: relative;">
+                            <span class="chapter-info__info-list__title font-bold" style="box-sizing: border-box; flex: 0 0 3.27cm; font-size: 0.3cm; font-weight: 700; letter-spacing: -0.02cm; margin: 0; margin-left: 0.56cm; padding: 0; position: relative;">Date
+                                of Valuation</span>
+                            <span class="chapter-info__info-list__value" style="box-sizing: border-box; display: flex; flex: 1; flex-direction: column; font-size: 0.3cm; gap: 0.4cm; letter-spacing: -0.02cm; line-height: 0.44cm; margin: 0; margin-left: 0.71cm; padding: 0; position: relative;">
+                                <span class="" style="box-sizing: border-box; margin: 0; padding: 0; position: relative;">13th July
+                                    2023</span>
+
+                                <span class="" style="box-sizing: border-box; margin: 0; padding: 0; position: relative;">
+                                    This report is relevant at the date of valuation and to circumstances prevailing at
+                                    that
+                                    time. However, within a rapidly changing economic environment experiencing
+                                    fluctuations
+                                    in interest rates, rents and building expenditure, returns on investments and values
+                                    as
+                                    a consequence may be susceptible to variation, sometimes over a relatively short
+                                    time
+                                    scale. This valuation is valid for 3 months.
+                                </span>
+
+
+                                <span class="" style="box-sizing: border-box; margin: 0; padding: 0; position: relative;">
+                                    The Client acknowledges that to the extent that instructions have been received for
+                                    the
+                                    purposes of preparing this Valuation and the Valuation Services, it has been assumed
+                                    that a full and frank disclosure of all relevant information has been made.
+                                </span>
+                            </span>
+                        </li>
+
+                        <li class="chapter-info__info-list__li" style="box-sizing: border-box; counter-increment: info-list-counter 1; display: flex; margin: 0; padding: 0; position: relative;">
+                            <span class="chapter-info__info-list__title font-bold" style="box-sizing: border-box; flex: 0 0 3.27cm; font-size: 0.3cm; font-weight: 700; letter-spacing: -0.02cm; margin: 0; margin-left: 0.56cm; padding: 0; position: relative;">Valuers
+                                Interest</span>
+                            <span class="chapter-info__info-list__value" style="box-sizing: border-box; display: flex; flex: 1; flex-direction: column; font-size: 0.3cm; gap: 0.4cm; letter-spacing: -0.02cm; line-height: 0.44cm; margin: 0; margin-left: 0.71cm; padding: 0; position: relative;">We
+                                confirm that neither StrataVal, nor its
+                                partners
+                                nor its employees have
+                                any interest of a personal, business, pecuniary or other relationship with the
+                                instructing party and/or the lot owners of the owners corporation.
+                            </span>
+                        </li>
+
+                    </ol>
+                </div>
+                <!-- / Chapter Info -->
+            </div>
+            <!-- / Page Body -->
+
+            <!-- Page Footer -->
+            <div class="page__footer" style="bottom: 0; box-sizing: border-box; height: 1.2cm; margin: 0; padding: 0; position: absolute; width: 100%;">
+                <div class="bg-accent" style="background-color: var(--accent-color); box-sizing: border-box; height: 0.20cm; margin: 0; padding: 0; position: relative;">
+                </div>
+                <div class="bg-primary flex items-center justify-center" style="align-items: center; background-color: var(--primary-color); box-sizing: border-box; display: flex; height: 1cm; justify-content: center; margin: 0; padding: 0; position: relative;">
+                    <p class="font-bold" style="box-sizing: border-box; color: white; font-size: 0.42cm; font-weight: 700; margin: 0; padding: 0; position: relative;">
+                        Replacement Cost Insurance Valuers</p>
+                </div>
+            </div>
+            <!-- / Page Footer -->
+
+        </div>
+        <!-- / Page -->
+
+        <!-- Page | Fourth Page | Empty -->
+        <div class="page" style="box-sizing: border-box; height: 29.7cm; margin: 0 auto; margin-bottom: 0.25cm; padding: 0; position: relative; width: 21cm;">
+
+            <!-- Page Header -->
+            <div class="page__head" style="box-sizing: border-box; height: 1.35cm; margin: 0; padding: 0; position: relative; width: 100%;">
+                <div class="bg-primary" style="background-color: var(--primary-color); box-sizing: border-box; height: 1.15cm; margin: 0; padding: 0; position: relative;">
+                </div>
+                <div class="bg-accent" style="background-color: var(--accent-color); box-sizing: border-box; height: 0.20cm; margin: 0; padding: 0; position: relative;">
+                </div>
+            </div>
+            <!-- / Page Header -->
+
+            <!-- Page Body -->
+            <div class="page__body" style="box-sizing: border-box; height: 27.15cm; margin: 0; padding: 0; position: relative;">
+
+                <!-- logo -->
+                <div class="page__right-logo" style="box-sizing: border-box; margin: 0; margin-bottom: 1.2cm; margin-left: auto; margin-right: 2.3cm; margin-top: 1cm; padding: 0; position: relative; width: 3.56cm;">
+                    <p class="page__right-logo__company-name font-bold" style="box-sizing: border-box; font-size: 0.66cm; font-weight: 700; letter-spacing: 0cm; margin: 0; padding: 0; position: relative;">
+                        <span class="color-primary" style="box-sizing: border-box; color: var(--primary-color); margin: 0; padding: 0; position: relative;">Strata</span><span class="color-accent" style="box-sizing: border-box; color: var(--accent-color); margin: 0; padding: 0; position: relative;">Val</span>
+                    </p>
+                </div>
+                <!-- / logo -->
+
+                <!-- Top Bar -->
+                <div class="page__top-bar bg-primary flex items-center" style="align-items: center; background-color: var(--primary-color); border: 0.042cm solid black; box-sizing: border-box; display: flex; height: 0.76cm; margin: 0; margin-left: 2.3cm; margin-right: 2.1cm; padding: 0; padding-left: 0.15cm; position: relative;">
+                    <p class="font-bold" style="box-sizing: border-box; color: white; font-size: 0.32cm; font-weight: 700; margin: 0; padding: 0; position: relative;">
+                        <span class="chapter-info__h2__num" style="box-sizing: border-box; margin: 0; padding: 0; position: relative;">4.</span>
+                        <span class="chapter-info__h2__text" style="box-sizing: border-box; margin: 0; padding: 0; position: relative;">Valuation Details
+                            Continued</span>
+                    </p>
+                </div>
+                <!-- / Top Bar -->
+
+                <!-- Chapter Info four columns layout -->
+                <div class="chapter-info-four-columns-layout" style="box-sizing: border-box; counter-reset: info-list-four-columns-layout-counter 11; margin: 0 2cm; margin-top: 0.4cm; padding: 0; position: relative;">
+
+                    <ol class="chapter-info-four-columns-layout__info-list" style="--info-list-counter-var: '4'; box-sizing: border-box; list-style: none; margin: 0; padding: 0; padding-left: 0.45cm; padding-right: 1cm; position: relative;">
+
+                        <li class="chapter-info-four-columns-layout__info-list__li" style="box-sizing: border-box; counter-increment: info-list-four-columns-layout-counter 1; display: flex; flex-wrap: wrap; margin: 0; padding: 0; position: relative;">
+                            <span class="chapter-info-four-columns-layout__info-list__title font-bold" style="box-sizing: border-box; font-size: 0.3cm; font-weight: 700; letter-spacing: -0.02cm; margin: 0; padding: 0; position: relative;">Valuation
+                                Assessment
+                            </span>
+
+                            <div class="chapter-info-four-columns-layout__info-list__value" style="box-sizing: border-box; display: flex; flex: 0 0 100%; flex-direction: column; gap: 0.05cm; margin: 0; margin-top: 0.5cm; padding: 0; position: relative;">
+
+                                <div class="chapter-info-four-columns-layout__value__row" style="box-sizing: border-box; display: flex; margin: 0; padding: 0; position: relative;">
+
+                                    <div class="chapter-info-four-columns-layout__value__info" style="box-sizing: border-box; display: flex; flex: 0 0 8.9cm; margin: 0; padding: 0; position: relative;">
+                                        <span class="chapter-info-four-columns-layout__value__property" style="box-sizing: border-box; flex: 0 0 5.1cm; font-size: 0.3cm; font-weight: 700; letter-spacing: -0.02cm; margin: 0; padding: 0; position: relative;">CORPORATION
+                                            NO:</span>
+                                        <span class="chapter-info-four-columns-layout__value__property-value" style="box-sizing: border-box; font-size: 0.3cm; letter-spacing: -0.02cm; margin: 0; padding: 0; position: relative;">SP020457M</span>
+                                    </div>
+
+                                    <div class="chapter-info-four-columns-layout__value__info" style="box-sizing: border-box; display: flex; flex: 0 0 7cm; margin: 0; padding: 0; position: relative;">
+                                        <span class="chapter-info-four-columns-layout__value__property" style="box-sizing: border-box; flex: 0 0 3.8cm; font-size: 0.3cm; font-weight: 700; letter-spacing: -0.02cm; margin: 0; padding: 0; position: relative;">VALUATION
+                                            DATE:</span>
+                                        <span class="chapter-info-four-columns-layout__value__property-value" style="box-sizing: border-box; font-size: 0.3cm; letter-spacing: -0.02cm; margin: 0; padding: 0; position: relative;">13th
+                                            July
+                                            2023</span>
+                                    </div>
+
+                                </div>
+
+                                <div class="chapter-info-four-columns-layout__value__row" style="box-sizing: border-box; display: flex; margin: 0; padding: 0; position: relative;">
+
+                                    <div class="chapter-info-four-columns-layout__value__info" style="box-sizing: border-box; display: flex; flex: 0 0 8.9cm; margin: 0; padding: 0; position: relative;">
+                                        <span class="chapter-info-four-columns-layout__value__property" style="box-sizing: border-box; flex: 0 0 5.1cm; font-size: 0.3cm; font-weight: 700; letter-spacing: -0.02cm; margin: 0; padding: 0; position: relative;">MANAGER:</span>
+                                        <span class="chapter-info-four-columns-layout__value__property-value" style="box-sizing: border-box; font-size: 0.3cm; letter-spacing: -0.02cm; margin: 0; padding: 0; position: relative;">Peter
+                                            Wilkins</span>
+                                    </div>
+
+                                    <div class="chapter-info-four-columns-layout__value__info" style="box-sizing: border-box; display: flex; flex: 0 0 7cm; margin: 0; padding: 0; position: relative;">
+                                        <span class="chapter-info-four-columns-layout__value__property" style="box-sizing: border-box; flex: 0 0 3.8cm; font-size: 0.3cm; font-weight: 700; letter-spacing: -0.02cm; margin: 0; padding: 0; position: relative;">VALUATION
+                                            REF:</span>
+                                        <span class="chapter-info-four-columns-layout__value__property-value" style="box-sizing: border-box; font-size: 0.3cm; letter-spacing: -0.02cm; margin: 0; padding: 0; position: relative;">15825</span>
+                                    </div>
+
+                                </div>
+
+                                <div class="chapter-info-four-columns-layout__value__row" style="box-sizing: border-box; display: flex; margin: 0; padding: 0; position: relative;">
+
+                                    <div class="chapter-info-four-columns-layout__value__info" style="box-sizing: border-box; display: flex; flex: 0 0 8.9cm; margin: 0; padding: 0; position: relative;">
+                                    </div>
+
+                                    <div class="chapter-info-four-columns-layout__value__info" style="box-sizing: border-box; display: flex; flex: 0 0 7cm; margin: 0; padding: 0; position: relative;">
+                                        <span class="chapter-info-four-columns-layout__value__property" style="box-sizing: border-box; flex: 0 0 3.8cm; font-size: 0.3cm; font-weight: 700; letter-spacing: -0.02cm; margin: 0; padding: 0; position: relative;">
+                                            VALUATION ISSUE:
+                                        </span>
+
+                                        <span class="chapter-info-four-columns-layout__value__property-value" style="box-sizing: border-box; font-size: 0.3cm; letter-spacing: -0.02cm; margin: 0; padding: 0; position: relative;">
+                                            1 of 5
+                                        </span>
+                                    </div>
+
+                                </div>
+
+                                <div class="chapter-info-four-columns-layout__value__row" style="box-sizing: border-box; display: flex; margin: 0; padding: 0; position: relative;">
+
+                                    <div class="chapter-info-four-columns-layout__value__info" style="box-sizing: border-box; display: flex; flex: 0 0 8.9cm; margin: 0; padding: 0; position: relative;">
+                                        <span class="chapter-info-four-columns-layout__value__property" style="box-sizing: border-box; flex: 0 0 5.1cm; font-size: 0.3cm; font-weight: 700; letter-spacing: -0.02cm; margin: 0; padding: 0; position: relative;">
+                                            PURPOSE OF VALUATION:
+                                        </span>
+                                        <span class="chapter-info-four-columns-layout__value__property-value" style="box-sizing: border-box; font-size: 0.3cm; letter-spacing: -0.02cm; margin: 0; padding: 0; position: relative;">
+                                            Replacement Cost
+                                        </span>
+                                    </div>
+
+                                    <div class="chapter-info-four-columns-layout__value__info" style="box-sizing: border-box; display: flex; flex: 0 0 7cm; margin: 0; padding: 0; position: relative;">
+                                        <span class="chapter-info-four-columns-layout__value__property" style="box-sizing: border-box; flex: 0 0 3.8cm; font-size: 0.3cm; font-weight: 700; letter-spacing: -0.02cm; margin: 0; padding: 0; position: relative;">
+                                            NEXT ISSUE DATE:
+                                        </span>
+                                        <span class="chapter-info-four-columns-layout__value__property-value" style="box-sizing: border-box; font-size: 0.3cm; letter-spacing: -0.02cm; margin: 0; padding: 0; position: relative;">
+                                            13th July 2024
+                                        </span>
+                                    </div>
+
+                                </div>
+
+                                <div class="line-separator" style="background: #000; box-sizing: border-box; height: 0.03cm; margin: 0.4cm auto; padding: 0; position: relative; width: 100%;">
+                                </div>
+
+                                <div class="chapter-info-four-columns-layout__value__row" style="box-sizing: border-box; display: flex; margin: 0; padding: 0; position: relative;">
+
+                                    <div class="chapter-info-four-columns-layout__value__info flex-1" style="box-sizing: border-box; display: flex; flex: 1 !important; margin: 0; padding: 0; position: relative;">
+                                        <span class="chapter-info-four-columns-layout__value__property" style="box-sizing: border-box; flex: 0 0 5.1cm; font-size: 0.3cm; font-weight: 700; letter-spacing: -0.02cm; margin: 0; padding: 0; position: relative;">
+                                            PROPERTY ADDRESS:
+                                        </span>
+                                        <span class="chapter-info-four-columns-layout__value__property-value" style="box-sizing: border-box; font-size: 0.3cm; letter-spacing: -0.02cm; margin: 0; padding: 0; position: relative;">
+                                            2A Kireep Road, Balwyn VIC 3103
+                                        </span>
+                                    </div>
+
+                                </div>
+
+                                <div class="chapter-info-four-columns-layout__value__row mt-0.5" style="box-sizing: border-box; display: flex; margin: 0; margin-top: 0.5cm; padding: 0; position: relative;">
+
+                                    <div class="chapter-info-four-columns-layout__value__info" style="box-sizing: border-box; display: flex; flex: 0 0 8.9cm; margin: 0; padding: 0; position: relative;">
+                                        <span class="chapter-info-four-columns-layout__value__property" style="box-sizing: border-box; flex: 0 0 5.1cm; font-size: 0.3cm; font-weight: 700; letter-spacing: -0.02cm; margin: 0; padding: 0; position: relative;">
+                                            PROPERTY TYPE:
+                                        </span>
+                                        <span class="chapter-info-four-columns-layout__value__property-value" style="box-sizing: border-box; font-size: 0.3cm; letter-spacing: -0.02cm; margin: 0; padding: 0; position: relative;">
+                                            Retirement Village
+                                        </span>
+                                    </div>
+
+                                    <div class="chapter-info-four-columns-layout__value__info" style="box-sizing: border-box; display: flex; flex: 0 0 7cm; margin: 0; padding: 0; position: relative;">
+                                        <span class="chapter-info-four-columns-layout__value__property" style="box-sizing: border-box; flex: 0 0 3.8cm; font-size: 0.3cm; font-weight: 700; letter-spacing: -0.02cm; margin: 0; padding: 0; position: relative;">
+                                            AGG/ ENTITLEMENT:
+                                        </span>
+                                        <span class="chapter-info-four-columns-layout__value__property-value" style="box-sizing: border-box; font-size: 0.3cm; letter-spacing: -0.02cm; margin: 0; padding: 0; position: relative;">
+                                            4355/4355
+                                        </span>
+                                    </div>
+
+                                </div>
+
+                                <div class="chapter-info-four-columns-layout__value__row" style="box-sizing: border-box; display: flex; margin: 0; padding: 0; position: relative;">
+
+                                    <div class="chapter-info-four-columns-layout__value__info" style="box-sizing: border-box; display: flex; flex: 0 0 8.9cm; margin: 0; padding: 0; position: relative;">
+                                        <span class="chapter-info-four-columns-layout__value__property" style="box-sizing: border-box; flex: 0 0 5.1cm; font-size: 0.3cm; font-weight: 700; letter-spacing: -0.02cm; margin: 0; padding: 0; position: relative;">
+                                            DESCRIPTION:
+                                        </span>
+                                        <span class="chapter-info-four-columns-layout__value__property-value" style="box-sizing: border-box; font-size: 0.3cm; letter-spacing: -0.02cm; margin: 0; padding: 0; position: relative;">
+                                            64 Lots
+                                        </span>
+                                    </div>
+
+                                    <div class="chapter-info-four-columns-layout__value__info" style="box-sizing: border-box; display: flex; flex: 0 0 7cm; margin: 0; padding: 0; position: relative;">
+                                        <span class="chapter-info-four-columns-layout__value__property" style="box-sizing: border-box; flex: 0 0 3.8cm; font-size: 0.3cm; font-weight: 700; letter-spacing: -0.02cm; margin: 0; padding: 0; position: relative;">
+                                            ENCUMB/EASEMENT:
+                                        </span>
+                                        <span class="chapter-info-four-columns-layout__value__property-value" style="box-sizing: border-box; font-size: 0.3cm; letter-spacing: -0.02cm; margin: 0; padding: 0; position: relative;">
+                                            Refer to Plan
+                                        </span>
+                                    </div>
+
+                                </div>
+
+                                <div class="chapter-info-four-columns-layout__value__row" style="box-sizing: border-box; display: flex; margin: 0; padding: 0; position: relative;">
+
+                                    <div class="chapter-info-four-columns-layout__value__info" style="box-sizing: border-box; display: flex; flex: 0 0 8.9cm; margin: 0; padding: 0; position: relative;">
+                                        <span class="chapter-info-four-columns-layout__value__property" style="box-sizing: border-box; flex: 0 0 5.1cm; font-size: 0.3cm; font-weight: 700; letter-spacing: -0.02cm; margin: 0; padding: 0; position: relative;">
+                                            SURVEYORS:
+                                        </span>
+                                        <span class="chapter-info-four-columns-layout__value__property-value" style="box-sizing: border-box; font-size: 0.3cm; letter-spacing: -0.02cm; margin: 0; padding: 0; position: relative;">
+                                            Gordon Victor Valentine
+                                        </span>
+                                    </div>
+
+                                    <div class="chapter-info-four-columns-layout__value__info" style="box-sizing: border-box; display: flex; flex: 0 0 7cm; margin: 0; padding: 0; position: relative;">
+                                        <span class="chapter-info-four-columns-layout__value__property" style="box-sizing: border-box; flex: 0 0 3.8cm; font-size: 0.3cm; font-weight: 700; letter-spacing: -0.02cm; margin: 0; padding: 0; position: relative;">
+                                            TOTAL SITE AREA:
+                                        </span>
+                                        <span class="chapter-info-four-columns-layout__value__property-value" style="box-sizing: border-box; font-size: 0.3cm; letter-spacing: -0.02cm; margin: 0; padding: 0; position: relative;">
+                                            5,624 sqm Approx.
+                                        </span>
+                                    </div>
+
+                                </div>
+
+                                <div class="chapter-info-four-columns-layout__value__row" style="box-sizing: border-box; display: flex; margin: 0; padding: 0; position: relative;">
+
+                                    <div class="chapter-info-four-columns-layout__value__info" style="box-sizing: border-box; display: flex; flex: 0 0 8.9cm; margin: 0; padding: 0; position: relative;">
+                                        <span class="chapter-info-four-columns-layout__value__property" style="box-sizing: border-box; flex: 0 0 5.1cm; font-size: 0.3cm; font-weight: 700; letter-spacing: -0.02cm; margin: 0; padding: 0; position: relative;">
+                                            SERVICES:
+                                        </span>
+                                        <span class="chapter-info-four-columns-layout__value__property-value" style="box-sizing: border-box; font-size: 0.3cm; letter-spacing: -0.02cm; margin: 0; padding: 0; position: relative;">
+                                            All Usual Services
+                                        </span>
+                                    </div>
+
+                                    <div class="chapter-info-four-columns-layout__value__info" style="box-sizing: border-box; display: flex; flex: 0 0 7cm; margin: 0; padding: 0; position: relative;">
+                                        <span class="chapter-info-four-columns-layout__value__property" style="box-sizing: border-box; flex: 0 0 3.8cm; font-size: 0.3cm; font-weight: 700; letter-spacing: -0.02cm; margin: 0; padding: 0; position: relative;">
+                                            LOCAL GOVT AREA:
+                                        </span>
+                                        <span class="chapter-info-four-columns-layout__value__property-value" style="box-sizing: border-box; font-size: 0.3cm; letter-spacing: -0.02cm; margin: 0; padding: 0; position: relative;">
+                                            Boorondara City
+                                        </span>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </li>
+                    </ol>
+
+                </div>
+                <!-- / Chapter Info four columns layout -->
+
+                <!-- Table Data -->
+                <div class="table-wrapper" style="box-sizing: border-box; margin: 0; margin-left: 2.25cm; margin-right: 2.15cm; margin-top: 0.45cm; padding: 0; position: relative;">
+                    <table class="table-crv-data" style="border: 1px solid #000; border-collapse: collapse; box-sizing: border-box; margin: 0; padding: 0; position: relative; table-layout: fixed; width: 100%;">
+                        <thead class="bg-primary" style="background-color: var(--primary-color); box-sizing: border-box; margin: 0; padding: 0; position: relative;">
+                            <tr style="box-sizing: border-box; margin: 0; padding: 0; position: relative;">
+                                <th style="border: 1px solid #000; box-sizing: border-box; color: white; margin: 0; padding: 0.1cm 0 !important; position: relative; text-align: center; width: 0.8cm;">
+                                </th>
+                                <th style="border: 1px solid #000; box-sizing: border-box; color: white; margin: 0; padding: 0.1cm 0 !important; position: relative; text-align: center; width: 13.1cm;">
+                                    CAPITAL REPLACEMENT VALUATION</th>
+                                <th style="border: 1px solid #000; box-sizing: border-box; color: white; margin: 0; padding: 0.1cm 0 !important; position: relative; text-align: center; width: 0.6cm;">
+                                </th>
+                                <th style="border: 1px solid #000; box-sizing: border-box; color: white; margin: 0; padding: 0.1cm 0 !important; position: relative; text-align: center; width: auto;">
+                                    AMOUNT</th>
+                            </tr>
+                        </thead>
+
+                        <tbody style="box-sizing: border-box; margin: 0; padding: 0; position: relative;">
+                            <tr style="background-color: #FBE4D5; box-sizing: border-box; margin: 0; padding: 0; position: relative;">
+                                <td style="border: 1px solid #000; box-sizing: border-box; font-size: 0.3cm; margin: 0; padding: 0.13cm 0.1cm; position: relative;">
+                                    1</td>
+                                <td style="border: 1px solid #000; box-sizing: border-box; font-size: 0.3cm; margin: 0; padding: 0.13cm 0.1cm; position: relative;">
+                                    Demolition and removal of debris</td>
+                                <td style="border: 1px solid #000; border-right: none; box-sizing: border-box; font-size: 0.3cm; margin: 0; padding: 0.13cm 0.1cm; position: relative;">
+                                    $</td>
+                                <td style="border: 1px solid #000; border-left: none; box-sizing: border-box; font-size: 0.3cm; margin: 0; padding: 0.13cm 0.1cm; position: relative; text-align: right;">
+                                    300,000</td>
+                            </tr>
+
+                            <tr style="box-sizing: border-box; margin: 0; padding: 0; position: relative;">
+                                <td style="border: 1px solid #000; box-sizing: border-box; font-size: 0.3cm; margin: 0; padding: 0.13cm 0.1cm; position: relative;">
+                                    2</td>
+                                <td style="border: 1px solid #000; box-sizing: border-box; font-size: 0.3cm; margin: 0; padding: 0.13cm 0.1cm; position: relative;">
+                                    Estimated reinstatement/reconstruction value - Main Buildings</td>
+                                <td style="border: 1px solid #000; border-right: none; box-sizing: border-box; font-size: 0.3cm; margin: 0; padding: 0.13cm 0.1cm; position: relative;">
+                                    $</td>
+                                <td style="border: 1px solid #000; border-left: none; box-sizing: border-box; font-size: 0.3cm; margin: 0; padding: 0.13cm 0.1cm; position: relative; text-align: right;">
+                                    8,189,000</td>
+                            </tr>
+
+                            <tr style="background-color: #FBE4D5; box-sizing: border-box; margin: 0; padding: 0; position: relative;">
+                                <td style="border: 1px solid #000; box-sizing: border-box; font-size: 0.3cm; margin: 0; padding: 0.13cm 0.1cm; position: relative;">
+                                    3</td>
+                                <td style="border: 1px solid #000; box-sizing: border-box; font-size: 0.3cm; margin: 0; padding: 0.13cm 0.1cm; position: relative;">
+                                    Estimated reinstatement/reconstruction value - Carports</td>
+                                <td style="border: 1px solid #000; border-right: none; box-sizing: border-box; font-size: 0.3cm; margin: 0; padding: 0.13cm 0.1cm; position: relative;">
+                                    $</td>
+                                <td style="border: 1px solid #000; border-left: none; box-sizing: border-box; font-size: 0.3cm; margin: 0; padding: 0.13cm 0.1cm; position: relative; text-align: right;">
+                                    150,000</td>
+                            </tr>
+
+                            <tr style="box-sizing: border-box; margin: 0; padding: 0; position: relative;">
+                                <td style="border: 1px solid #000; box-sizing: border-box; font-size: 0.3cm; margin: 0; padding: 0.13cm 0.1cm; position: relative;">
+                                    4</td>
+                                <td style="border: 1px solid #000; box-sizing: border-box; font-size: 0.3cm; margin: 0; padding: 0.13cm 0.1cm; position: relative;">
+                                    Estimated reinstatement/reconstruction value - Suspended Ramping</td>
+                                <td style="border: 1px solid #000; border-right: none; box-sizing: border-box; font-size: 0.3cm; margin: 0; padding: 0.13cm 0.1cm; position: relative;">
+                                    $</td>
+                                <td style="border: 1px solid #000; border-left: none; box-sizing: border-box; font-size: 0.3cm; margin: 0; padding: 0.13cm 0.1cm; position: relative; text-align: right;">
+                                    200,000</td>
+                            </tr>
+
+                            <tr style="background-color: #FBE4D5; box-sizing: border-box; margin: 0; padding: 0; position: relative;">
+                                <td style="border: 1px solid #000; box-sizing: border-box; font-size: 0.3cm; margin: 0; padding: 0.13cm 0.1cm; position: relative;">
+                                    5</td>
+                                <td style="border: 1px solid #000; box-sizing: border-box; font-size: 0.3cm; margin: 0; padding: 0.13cm 0.1cm; position: relative;">
+                                    Other Improvements, paving, fencing, landscaping &amp; sundries.</td>
+                                <td style="border: 1px solid #000; border-right: none; box-sizing: border-box; font-size: 0.3cm; margin: 0; padding: 0.13cm 0.1cm; position: relative;">
+                                    $</td>
+                                <td style="border: 1px solid #000; border-left: none; box-sizing: border-box; font-size: 0.3cm; margin: 0; padding: 0.13cm 0.1cm; position: relative; text-align: right;">
+                                    500,000</td>
+                            </tr>
+
+                            <tr style="box-sizing: border-box; margin: 0; padding: 0; position: relative;">
+                                <td style="border: 1px solid #000; box-sizing: border-box; font-size: 0.3cm; margin: 0; padding: 0.13cm 0.1cm; position: relative;">
+                                    6</td>
+                                <td style="border: 1px solid #000; box-sizing: border-box; font-size: 0.3cm; margin: 0; padding: 0.13cm 0.1cm; position: relative;">
+                                    Professional fees for design and project management, development application.</td>
+                                <td style="border: 1px solid #000; border-right: none; box-sizing: border-box; font-size: 0.3cm; margin: 0; padding: 0.13cm 0.1cm; position: relative;">
+                                    $</td>
+                                <td style="border: 1px solid #000; border-left: none; box-sizing: border-box; font-size: 0.3cm; margin: 0; padding: 0.13cm 0.1cm; position: relative; text-align: right;">
+                                    300,000</td>
+                            </tr>
+
+                            <tr style="background-color: #FBE4D5; box-sizing: border-box; margin: 0; padding: 0; position: relative;">
+                                <td style="border: 1px solid #000; box-sizing: border-box; font-size: 0.3cm; margin: 0; padding: 0.13cm 0.1cm; position: relative;">
+                                    7</td>
+                                <td class="font-bold text-right" style="border: 1px solid #000; box-sizing: border-box; font-size: 0.3cm; font-weight: 700; margin: 0; padding: 0.13cm 0.1cm; position: relative; text-align: right;">
+                                    Sub-Total</td>
+                                <td style="border: 1px solid #000; border-right: none; box-sizing: border-box; font-size: 0.3cm; margin: 0; padding: 0.13cm 0.1cm; position: relative;">
+                                    $</td>
+                                <td style="border: 1px solid #000; border-left: none; box-sizing: border-box; font-size: 0.3cm; margin: 0; padding: 0.13cm 0.1cm; position: relative; text-align: right;">
+                                    9,639,500</td>
+                            </tr>
+
+                            <tr style="box-sizing: border-box; margin: 0; padding: 0; position: relative;">
+                                <td style="border: 1px solid #000; box-sizing: border-box; font-size: 0.3cm; margin: 0; padding: 0.13cm 0.1cm; position: relative;">
+                                    8</td>
+                                <td style="border: 1px solid #000; box-sizing: border-box; font-size: 0.3cm; margin: 0; padding: 0.13cm 0.1cm; position: relative;">
+                                    Escalation over life of policy (3%)</td>
+                                <td style="border: 1px solid #000; border-right: none; box-sizing: border-box; font-size: 0.3cm; margin: 0; padding: 0.13cm 0.1cm; position: relative;">
+                                    $</td>
+                                <td style="border: 1px solid #000; border-left: none; box-sizing: border-box; font-size: 0.3cm; margin: 0; padding: 0.13cm 0.1cm; position: relative; text-align: right;">
+                                    289,185</td>
+                            </tr>
+
+                            <tr style="background-color: #FBE4D5; box-sizing: border-box; margin: 0; padding: 0; position: relative;">
+                                <td style="border: 1px solid #000; box-sizing: border-box; font-size: 0.3cm; margin: 0; padding: 0.13cm 0.1cm; position: relative;">
+                                    9</td>
+                                <td style="border: 1px solid #000; box-sizing: border-box; font-size: 0.3cm; margin: 0; padding: 0.13cm 0.1cm; position: relative;">
+                                    Escalation to commencement of construction (2.5% per annum)</td>
+                                <td style="border: 1px solid #000; border-right: none; box-sizing: border-box; font-size: 0.3cm; margin: 0; padding: 0.13cm 0.1cm; position: relative;">
+                                    $</td>
+                                <td style="border: 1px solid #000; border-left: none; box-sizing: border-box; font-size: 0.3cm; margin: 0; padding: 0.13cm 0.1cm; position: relative; text-align: right;">
+                                    240,988</td>
+                            </tr>
+
+                            <tr style="box-sizing: border-box; margin: 0; padding: 0; position: relative;">
+                                <td style="border: 1px solid #000; box-sizing: border-box; font-size: 0.3cm; margin: 0; padding: 0.13cm 0.1cm; position: relative;">
+                                    10</td>
+                                <td style="border: 1px solid #000; box-sizing: border-box; font-size: 0.3cm; margin: 0; padding: 0.13cm 0.1cm; position: relative;">
+                                    Escalation during construction period (3% per annum)</td>
+                                <td style="border: 1px solid #000; border-right: none; box-sizing: border-box; font-size: 0.3cm; margin: 0; padding: 0.13cm 0.1cm; position: relative;">
+                                    $</td>
+                                <td style="border: 1px solid #000; border-left: none; box-sizing: border-box; font-size: 0.3cm; margin: 0; padding: 0.13cm 0.1cm; position: relative; text-align: right;">
+                                    289,185</td>
+                            </tr>
+
+                            <tr style="background-color: #FBE4D5; box-sizing: border-box; margin: 0; padding: 0; position: relative;">
+                                <td style="border: 1px solid #000; box-sizing: border-box; font-size: 0.3cm; margin: 0; padding: 0.13cm 0.1cm; position: relative;">
+                                    11</td>
+                                <td class="font-bold text-right" style="border: 1px solid #000; box-sizing: border-box; font-size: 0.3cm; font-weight: 700; margin: 0; padding: 0.13cm 0.1cm; position: relative; text-align: right;">
+                                    Capital Replacement Value</td>
+                                <td style="border: 1px solid #000; border-right: none; box-sizing: border-box; font-size: 0.3cm; margin: 0; padding: 0.13cm 0.1cm; position: relative;">
+                                    $</td>
+                                <td style="border: 1px solid #000; border-left: none; box-sizing: border-box; font-size: 0.3cm; margin: 0; padding: 0.13cm 0.1cm; position: relative; text-align: right;">
+                                    10,458,858</td>
+                            </tr>
+
+                            <tr style="box-sizing: border-box; margin: 0; padding: 0; position: relative;">
+                                <td style="border: 1px solid #000; box-sizing: border-box; font-size: 0.3cm; margin: 0; padding: 0.13cm 0.1cm; position: relative;">
+                                    12</td>
+                                <td style="border: 1px solid #000; box-sizing: border-box; font-size: 0.3cm; margin: 0; padding: 0.13cm 0.1cm; position: relative;">
+                                    GST @ 10%</td>
+                                <td style="border: 1px solid #000; border-right: none; box-sizing: border-box; font-size: 0.3cm; margin: 0; padding: 0.13cm 0.1cm; position: relative;">
+                                    $</td>
+                                <td style="border: 1px solid #000; border-left: none; box-sizing: border-box; font-size: 0.3cm; margin: 0; padding: 0.13cm 0.1cm; position: relative; text-align: right;">
+                                    1,045,886</td>
+                            </tr>
+
+
+                            <tr style="background-color: #FBE4D5; box-sizing: border-box; margin: 0; padding: 0; position: relative;">
+                                <td style="border: 1px solid #000; box-sizing: border-box; font-size: 0.3cm; margin: 0; padding: 0.13cm 0.1cm; position: relative;">
+                                    13</td>
+                                <td class="font-bold text-right" style="border: 1px solid #000; box-sizing: border-box; font-size: 0.3cm; font-weight: 700; margin: 0; padding: 0.13cm 0.1cm; position: relative; text-align: right;">
+                                    Capital Replacement Value including GST</td>
+                                <td style="border: 1px solid #000; border-right: none; box-sizing: border-box; font-size: 0.3cm; margin: 0; padding: 0.13cm 0.1cm; position: relative;">
+                                    $</td>
+                                <td style="border: 1px solid #000; border-left: none; box-sizing: border-box; font-size: 0.3cm; margin: 0; padding: 0.13cm 0.1cm; position: relative; text-align: right;">
+                                    11,504,743</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- / Table Data -->
+
+                <!-- Total and signature -->
+                <div class="total-and-text-signature" style="box-sizing: border-box; margin: 1.1cm 2.5cm 0 2.4cm; padding: 0; position: relative;">
+                    <div class="total flex justify-between" style="box-sizing: border-box; display: flex; justify-content: space-between; margin: 0; padding: 0; position: relative;">
+                        <p class="font-bold" style="box-sizing: border-box; font-size: 0.25cm; font-weight: 700; margin: 0; padding: 0; position: relative;">
+                            TOTAL REPLACEMENT COST - JULY 2023</p>
+                        <p class="font-bold" style="box-sizing: border-box; font-size: 0.25cm; font-weight: 700; margin: 0; padding: 0; position: relative;">
+                            = $11,500,000</p>
+
+                    </div>
+                </div>
+
+                <div class="text-signature" style="box-sizing: border-box; margin: 0 2.4cm; margin-top: 0.8cm; padding: 0; position: relative;">
+                    <p class="font-bold" style="box-sizing: border-box; font-size: 0.3cm; font-weight: 700; margin: 0; margin-bottom: 0.1cm; padding: 0; position: relative;">
+                        StrataVal Insurance Valuers</p>
+
+                    <img src="data:image/png;base64,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" alt="" class="signature" style="box-sizing: border-box; margin: 0; margin-top: 0.4cm; max-width: 100%; padding: 0; position: relative; width: 3cm;">
+
+                    <p class="font-bold" style="box-sizing: border-box; font-size: 0.3cm; font-weight: 700; margin: 0; margin-bottom: 0.1cm; padding: 0; position: relative;">
+                        Paul De Gilio</p>
+                    <p class="font-bold" style="box-sizing: border-box; font-size: 0.3cm; font-weight: 700; margin: 0; margin-bottom: 0.1cm; padding: 0; position: relative;">
+                        Certified Property Valuer</p>
+                    <p class="font-bold" style="box-sizing: border-box; font-size: 0.3cm; font-weight: 700; margin: 0; margin-bottom: 0.1cm; padding: 0; position: relative;">
+                        Member of the Australian Valuers Institute</p>
+                    <p class="font-bold" style="box-sizing: border-box; font-size: 0.3cm; font-weight: 700; margin: 0; margin-bottom: 0.1cm; padding: 0; position: relative;">
+                        Bachelor of Business Property (Valuations)</p>
+                    <p class="font-bold" style="box-sizing: border-box; font-size: 0.3cm; font-weight: 700; margin: 0; margin-bottom: 0.1cm; padding: 0; position: relative;">
+                        University of South Australia</p>
+
+                </div>
+                <!-- / Total and signature -->
+
+                <!-- / Page Body -->
+
+                <!-- Page Footer -->
+                <div class="page__footer" style="bottom: 0; box-sizing: border-box; height: 1.2cm; margin: 0; padding: 0; position: absolute; width: 100%;">
+                    <div class="bg-accent" style="background-color: var(--accent-color); box-sizing: border-box; height: 0.20cm; margin: 0; padding: 0; position: relative;">
+                    </div>
+                    <div class="bg-primary flex items-center justify-center" style="align-items: center; background-color: var(--primary-color); box-sizing: border-box; display: flex; height: 1cm; justify-content: center; margin: 0; padding: 0; position: relative;">
+                        <p class="font-bold" style="box-sizing: border-box; color: white; font-size: 0.42cm; font-weight: 700; margin: 0; padding: 0; position: relative;">
+                            Replacement Cost Insurance Valuers</p>
+                    </div>
+                </div>
+                <!-- / Page Footer -->
+
+            </div>
+            <!-- / Page -->
+
+
+        </div>
+        <!-- / Document Wrapper -->
+
+        <!-- Page | Fifth Page -->
+        <div class="page" style="box-sizing: border-box; height: 29.7cm; margin: 0 auto; margin-bottom: 0.25cm; padding: 0; position: relative; width: 21cm;">
+
+            <!-- Page Header -->
+            <div class="page__head" style="box-sizing: border-box; height: 1.35cm; margin: 0; padding: 0; position: relative; width: 100%;">
+                <div class="bg-primary" style="background-color: var(--primary-color); box-sizing: border-box; height: 1.15cm; margin: 0; padding: 0; position: relative;">
+                </div>
+                <div class="bg-accent" style="background-color: var(--accent-color); box-sizing: border-box; height: 0.20cm; margin: 0; padding: 0; position: relative;">
+                </div>
+            </div>
+            <!-- / Page Header -->
+
+            <!-- Page Body -->
+            <div class="page__body" style="box-sizing: border-box; height: 27.15cm; margin: 0; padding: 0; position: relative;">
+
+                <!-- logo -->
+                <div class="page__right-logo" style="box-sizing: border-box; margin: 0; margin-bottom: 1.2cm; margin-left: auto; margin-right: 2.3cm; margin-top: 1cm; padding: 0; position: relative; width: 3.56cm;">
+                    <p class="page__right-logo__company-name font-bold" style="box-sizing: border-box; font-size: 0.66cm; font-weight: 700; letter-spacing: 0cm; margin: 0; padding: 0; position: relative;">
+                        <span class="color-primary" style="box-sizing: border-box; color: var(--primary-color); margin: 0; padding: 0; position: relative;">Strata</span><span class="color-accent" style="box-sizing: border-box; color: var(--accent-color); margin: 0; padding: 0; position: relative;">Val</span>
+                    </p>
+                </div>
+                <!-- / logo -->
+
+                <!-- Contact and address info -->
+                <div class="contact-and-address-info flex" style="box-sizing: border-box; display: flex; gap: 0.8cm; margin: 1.4cm 2.4cm 0 2.5cm; padding: 0; position: relative;">
+                    <p class="" style="box-sizing: border-box; font-size: 0.284cm; margin: 0; padding: 0; position: relative;">
+                        <span class="font-bold" style="box-sizing: border-box; font-weight: 700; margin: 0; padding: 0; position: relative;">ADDRESS:</span>
+                        <span class="" style="box-sizing: border-box; margin: 0; padding: 0; position: relative;">
+                            805/220 Collins Street, Melbourne VIC 3000 </span>
+                    </p>
+                    <p class="" style="box-sizing: border-box; font-size: 0.284cm; margin: 0; padding: 0; position: relative;">
+                        <span class="font-bold" style="box-sizing: border-box; font-weight: 700; margin: 0; padding: 0; position: relative;">TELEPHONE:</span>
+                        <span class="" style="box-sizing: border-box; margin: 0; padding: 0; position: relative;">03
+                            9001 0576</span>
+                    </p>
+                </div>
+                <!-- / Contact and address info -->
+
+            </div>
+            <!-- / Page Body -->
+
+
+            <!-- Page Footer -->
+            <div class="page__footer" style="bottom: 0; box-sizing: border-box; height: 1.2cm; margin: 0; padding: 0; position: absolute; width: 100%;">
+                <div class="bg-accent" style="background-color: var(--accent-color); box-sizing: border-box; height: 0.20cm; margin: 0; padding: 0; position: relative;">
+                </div>
+                <div class="bg-primary flex items-center justify-center" style="align-items: center; background-color: var(--primary-color); box-sizing: border-box; display: flex; height: 1cm; justify-content: center; margin: 0; padding: 0; position: relative;">
+                    <p class="font-bold" style="box-sizing: border-box; color: white; font-size: 0.42cm; font-weight: 700; margin: 0; padding: 0; position: relative;">
+                        Replacement Cost Insurance Valuers</p>
+                </div>
+            </div>
+            <!-- / Page Footer -->
+
+        </div>
+        <!-- / Page -->
+
+    </div>
+    <!-- / Document Wrapper -->
+
+
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+
+</body></html>
