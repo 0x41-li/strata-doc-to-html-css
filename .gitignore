@@ -1,4 +1,6 @@
 node_modules/
 
+# scripts
 convert-images-to-base64.js
 convert-to-inline-css.js
+convert-cm-to-px.js
