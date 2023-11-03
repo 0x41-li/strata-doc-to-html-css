@@ -208,16 +208,14 @@ img {
   margin-left: 3cm;
   margin-right: 3cm;
 
-  display: flex;
   list-style: none;
-  flex-direction: column;
-  gap: 0.55cm;
 }
 
 .page__property-info__list li {
   display: flex;
   flex-direction: column;
   gap: 0.1cm;
+  margin-top: 0.55cm;
 }
 
 .page__property-info__list p {
