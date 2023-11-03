@@ -103,6 +103,7 @@ img {
   width: 21cm;
   height: 29.7cm;
   margin: 0 auto;
+  page-break-after: always;
 }
 
 .page__head {
