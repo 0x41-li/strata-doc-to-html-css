@@ -211,6 +211,7 @@ img {
   list-style: none;
   flex-direction: column;
   gap: 0.55cm;
+  column-gap: 0.55cm;
 }
 
 .page__property-info__list li {
