@@ -109,7 +109,7 @@ img {
   position: relative;
   left: 50%;
   transform: translateX(-50%);
-  width: 150%;
+  width: 100%;
   height: 1.35cm;
 }
 
@@ -208,10 +208,10 @@ img {
   margin-left: 3cm;
   margin-right: 3cm;
 
+  display: flex;
   list-style: none;
   flex-direction: column;
   gap: 0.55cm;
-  column-gap: 0.55cm;
 }
 
 .page__property-info__list li {
