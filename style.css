@@ -12,10 +12,6 @@
 }
 
 /* || Variables */
-:root {
-  --primary-color: #0044a7;
-  --accent-color: #f36a22;
-}
 
 /* || General */
 *,
@@ -23,6 +19,7 @@
 *::after,
 html,
 body {
+  border: 0;
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -34,6 +31,7 @@ html {
   font-size: 0.35cm;
 }
 
+html,
 body {
   width: 21cm;
   height: 29.7cm;
@@ -46,19 +44,19 @@ img {
 
 /* || Utilities */
 .bg-primary {
-  background-color: var(--primary-color);
+  background-color: #0044a7;
 }
 
 .bg-accent {
-  background-color: var(--accent-color);
+  background-color: #f36a22;
 }
 
 .color-primary {
-  color: var(--primary-color);
+  color: #0044a7;
 }
 
 .color-accent {
-  color: var(--accent-color);
+  color: #f36a22;
 }
 
 .font-bold {
@@ -97,8 +95,6 @@ img {
 .doc-wrapper {
   position: relative;
   margin: 0 auto;
-
-  overflow-x: hidden;
 }
 
 /* || Pages' shared styles */
@@ -107,9 +103,13 @@ img {
   width: 21cm;
   height: 29.7cm;
   margin: 0 auto;
+  page-break-after: always;
 }
 
 .page__head {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
   width: 100%;
   height: 1.35cm;
 }
@@ -210,14 +210,13 @@ img {
   margin-right: 3cm;
 
   list-style: none;
-  flex-direction: column;
-  gap: 0.55cm;
 }
 
 .page__property-info__list li {
   display: flex;
   flex-direction: column;
   gap: 0.1cm;
+  margin-top: 0.55cm;
 }
 
 .page__property-info__list p {
@@ -340,7 +339,6 @@ img {
   counter-reset: info-list-counter;
   display: flex;
   flex-direction: column;
-  gap: 0.4cm;
   padding-left: 0.35cm;
   padding-right: 1cm;
 }
@@ -349,10 +347,15 @@ img {
   counter-increment: info-list-counter 1;
 
   display: flex;
+  margin-bottom: 0.4cm;
+}
+
+.chapter-info__info-list__li:last-child {
+  margin-bottom: 0;
 }
 
 .chapter-info__info-list__li::before {
-  content: var(--info-list-counter-var) "." counter(info-list-counter);
+  content: undefined;
   flex: 0 0 0.71cm;
   font-weight: 700;
 }
@@ -398,8 +401,7 @@ img {
 }
 
 .chapter-info-four-columns-layout__info-list__li::before {
-  content: var(--info-list-counter-var) "."
-    counter(info-list-four-columns-layout-counter);
+  content: undefined;
   font-weight: 700;
   flex: 0 0 1.25cm;
   font-size: 0.3cm;
