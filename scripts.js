@@ -1,17 +1,55 @@
-var postcss = require("postcss");
-var cssvariables = require("postcss-css-variables");
+const fs = require("fs");
+const path = require("path");
+const cheerio = require("cheerio");
+const base64Img = require("base64-img");
 
-var fs = require("fs");
+// Read the contents of the style.css file
+const css = fs.readFileSync(path.join(__dirname, "style.css"), "utf8");
 
-var mycss = fs.readFileSync("style.css", "utf8");
+// Read the contents of the index.html file
+const html = fs.readFileSync(path.join(__dirname, "index.html"), "utf8");
 
-// Process your CSS with postcss-css-variables
-var output = postcss([cssvariables(/*options*/)]).process(mycss).css;
+// Load the HTML into Cheerio for easy manipulation
+const $ = cheerio.load(html);
 
-fs.writeFile("style-css-variables-values.css", output, "utf8", function (err) {
-  if (err) {
-    return console.log(err);
-  }
-  console.log("The file was saved!");
+// Find all the image tags in the HTML file and extract their source URLs
+const imgSrcs = $("img")
+  .map((i, el) => $(el).attr("src"))
+  .get();
+
+// For each image URL, read the contents of the corresponding image file and convert it to base64 encoding
+const base64Imgs = imgSrcs.reduce((acc, src) => {
+  const imgPath = path.join(__dirname, "images", src);
+  const base64 = base64Img.base64Sync(imgPath);
+  return { ...acc, [src]: base64 };
+}, {});
+
+// Replace the image URLs in the HTML file with their base64 encoded data
+$("img").each((i, el) => {
+  const src = $(el).attr("src");
+  const base64 = base64Imgs[src];
+  $(el).attr("src", `data:image/png;base64,${base64}`);
 });
 
+// Inline the CSS styles as style attributes on each element
+const styleElements = $("*").filter(
+  (i, el) => $(el).attr("style") === undefined
+);
+styleElements.each((i, el) => {
+  const element = $(el);
+  const elementStyles = element.attr("style") || "";
+  const newStyles = css.split("}").reduce((acc, rule) => {
+    const [property, value] = rule.split(":");
+    if (property && value) {
+      const selector = rule.split("{")[0].trim();
+      if (element.is(selector)) {
+        return `${acc}${property.trim()}:${value.trim()};`;
+      }
+    }
+    return acc;
+  }, "");
+  element.attr("style", `${elementStyles}${newStyles}`);
+});
+
+// Write the modified HTML file to a new file
+fs.writeFileSync(path.join(__dirname, "output.html"), $.html());
