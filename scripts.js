@@ -19,7 +19,7 @@ const imgSrcs = $("img")
 
 // For each image URL, read the contents of the corresponding image file and convert it to base64 encoding
 const base64Imgs = imgSrcs.reduce((acc, src) => {
-  const imgPath = path.join(__dirname, "images", src);
+  const imgPath = path.join(__dirname, src);
   const base64 = base64Img.base64Sync(imgPath);
   return { ...acc, [src]: base64 };
 }, {});
@@ -28,28 +28,11 @@ const base64Imgs = imgSrcs.reduce((acc, src) => {
 $("img").each((i, el) => {
   const src = $(el).attr("src");
   const base64 = base64Imgs[src];
-  $(el).attr("src", `data:image/png;base64,${base64}`);
+  $(el).attr("src", `${base64}`);
 });
 
-// Inline the CSS styles as style attributes on each element
-const styleElements = $("*").filter(
-  (i, el) => $(el).attr("style") === undefined
-);
-styleElements.each((i, el) => {
-  const element = $(el);
-  const elementStyles = element.attr("style") || "";
-  const newStyles = css.split("}").reduce((acc, rule) => {
-    const [property, value] = rule.split(":");
-    if (property && value) {
-      const selector = rule.split("{")[0].trim();
-      if (element.is(selector)) {
-        return `${acc}${property.trim()}:${value.trim()};`;
-      }
-    }
-    return acc;
-  }, "");
-  element.attr("style", `${elementStyles}${newStyles}`);
-});
+// Inline the CSS styles into the HTML file
+$("head").append(`<style>${css}</style>`);
 
 // Write the modified HTML file to a new file
 fs.writeFileSync(path.join(__dirname, "output.html"), $.html());
