@@ -284,16 +284,12 @@ img {
 }
 
 .toc__second-level-list > li {
-  margin-bottom: 0.15cm;
+  margin-bottom: 0.25cm;
   display: flex;
 
   align-items: center;
 
   overflow: hidden;
-}
-
-.toc__second-level-list > li:last-child {
-  margin-bottom: 0.05cm;
 }
 
 .toc__second-level-list > li::before {
@@ -303,6 +299,7 @@ img {
 
   display: inline-block;
   flex: 0 0 0.85cm;
+  font-size: 0.28cm;
 }
 
 .toc__second-level-list > li > span {
