@@ -1,13 +1,13 @@
 /* || Fonts */
 @font-face {
   font-family: "Verdana";
-  src: url("../fonts/Verdana.ttf");
+  src: url("./fonts/Verdana.ttf");
   font-weight: 400;
 }
 
 @font-face {
   font-family: "Verdana";
-  src: url("../fonts/Verdana-bold.ttf");
+  src: url("./fonts/Verdana-bold.ttf");
   font-weight: 700;
 }
 
